@@ -1,0 +1,3719 @@
+[
+  {
+    "id": 1773309394399,
+    "timestamp": "2026-03-12T09:56:34.399Z",
+    "url": "http://amazon-login-check.online/verify",
+    "threatScore": 65,
+    "classification": "Suspicious",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://amazon-login-check.online/verify",
+      "normalizedUrl": "http://amazon-login-check.online/verify",
+      "classification": "Suspicious",
+      "threatScore": 65,
+      "confidence": {
+        "level": "High",
+        "description": "Several indicators detected"
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "amazon-login-check.online",
+        "path": "/verify",
+        "hasPort": false,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 39,
+        "subdomainCount": 0,
+        "pathDepth": 1,
+        "specialCharCount": 2,
+        "suspiciousKeywords": [
+          "login",
+          "verify",
+          "amazon"
+        ],
+        "maliciousPatterns": [
+          "login-",
+          "amazon-"
+        ],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": true,
+        "riskFactors": [
+          "No HTTPS"
+        ]
+      },
+      "securityChecks": {
+        "domainAge": null,
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate - avoid entering sensitive data"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown - exercise caution"
+        },
+        "blacklistStatus": "unknown"
+      },
+      "explanation": {
+        "summary": "Moderate threat detected with 3 risk factors. Exercise caution.",
+        "riskFactors": [
+          "login",
+          "verify",
+          "amazon",
+          "login-",
+          "amazon-"
+        ],
+        "explanations": [
+          {
+            "category": "Suspicious Keywords",
+            "severity": "high",
+            "impact": 30,
+            "description": "Contains 3 suspicious keywords",
+            "details": "Keywords: login, verify, amazon",
+            "recommendation": "Be wary of URLs containing security-related keywords"
+          },
+          {
+            "category": "Phishing Indicators",
+            "severity": "high",
+            "impact": 25,
+            "description": "Contains patterns commonly used in phishing URLs",
+            "details": "Patterns: login-, amazon-",
+            "recommendation": "These patterns are frequently used to impersonate legitimate services"
+          },
+          {
+            "category": "No HTTPS Encryption",
+            "severity": "medium",
+            "impact": 10,
+            "description": "Does not use secure HTTPS protocol",
+            "details": "HTTPS provides encryption and authentication",
+            "recommendation": "Avoid entering sensitive information on non-HTTPS sites"
+          }
+        ],
+        "recommendation": {
+          "level": "MEDIUM RISK",
+          "action": "PROCEED WITH EXTREME CAUTION",
+          "message": "This content shows suspicious characteristics. Verify the sender through alternative means before taking any action.",
+          "color": "#ffc107"
+        },
+        "detailedBreakdown": {
+          "suspiciousKeywords": 30,
+          "phishingIndicators": 25,
+          "noHttps": 10
+        }
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-12T09:56:34.396Z",
+        "processingTime": 1773309394396,
+        "version": "2.0.0"
+      }
+    }
+  },
+  {
+    "id": 1773309963201,
+    "timestamp": "2026-03-12T10:06:03.201Z",
+    "url": "http://amazon-login-check.online/verify",
+    "threatScore": 65,
+    "classification": "Suspicious",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://amazon-login-check.online/verify",
+      "normalizedUrl": "http://amazon-login-check.online/verify",
+      "classification": "Suspicious",
+      "threatScore": 65,
+      "confidence": {
+        "level": "High",
+        "description": "Several indicators detected"
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "amazon-login-check.online",
+        "path": "/verify",
+        "hasPort": false,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 39,
+        "subdomainCount": 0,
+        "pathDepth": 1,
+        "specialCharCount": 2,
+        "suspiciousKeywords": [
+          "login",
+          "verify",
+          "amazon"
+        ],
+        "maliciousPatterns": [
+          "login-",
+          "amazon-"
+        ],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": true,
+        "riskFactors": [
+          "No HTTPS"
+        ]
+      },
+      "securityChecks": {
+        "domainAge": null,
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate - avoid entering sensitive data"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown - exercise caution"
+        },
+        "blacklistStatus": "unknown"
+      },
+      "explanation": {
+        "summary": "Moderate threat detected with 3 risk factors. Exercise caution.",
+        "riskFactors": [
+          "login",
+          "verify",
+          "amazon",
+          "login-",
+          "amazon-"
+        ],
+        "explanations": [
+          {
+            "category": "Suspicious Keywords",
+            "severity": "high",
+            "impact": 30,
+            "description": "Contains 3 suspicious keywords",
+            "details": "Keywords: login, verify, amazon",
+            "recommendation": "Be wary of URLs containing security-related keywords"
+          },
+          {
+            "category": "Phishing Indicators",
+            "severity": "high",
+            "impact": 25,
+            "description": "Contains patterns commonly used in phishing URLs",
+            "details": "Patterns: login-, amazon-",
+            "recommendation": "These patterns are frequently used to impersonate legitimate services"
+          },
+          {
+            "category": "No HTTPS Encryption",
+            "severity": "medium",
+            "impact": 10,
+            "description": "Does not use secure HTTPS protocol",
+            "details": "HTTPS provides encryption and authentication",
+            "recommendation": "Avoid entering sensitive information on non-HTTPS sites"
+          }
+        ],
+        "recommendation": {
+          "level": "MEDIUM RISK",
+          "action": "PROCEED WITH EXTREME CAUTION",
+          "message": "This content shows suspicious characteristics. Verify the sender through alternative means before taking any action.",
+          "color": "#ffc107"
+        },
+        "detailedBreakdown": {
+          "suspiciousKeywords": 30,
+          "phishingIndicators": 25,
+          "noHttps": 10
+        }
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-12T10:06:03.199Z",
+        "processingTime": 1773309963199,
+        "version": "2.0.0"
+      }
+    }
+  },
+  {
+    "id": 1773382442969,
+    "timestamp": "2026-03-13T06:14:02.969Z",
+    "url": "https://paypa1.com/verify-account",
+    "threatScore": 49,
+    "classification": "Suspicious",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "https://paypa1.com/verify-account",
+      "normalizedUrl": "https://paypa1.com/verify-account",
+      "classification": "Suspicious",
+      "threatScore": 49,
+      "confidence": {
+        "level": "Medium",
+        "description": "Some indicators detected"
+      },
+      "urlComponents": {
+        "protocol": "https:",
+        "domain": "paypa1.com",
+        "path": "/verify-account",
+        "hasPort": false,
+        "httpsUsed": true
+      },
+      "features": {
+        "length": 33,
+        "subdomainCount": 0,
+        "pathDepth": 1,
+        "specialCharCount": 1,
+        "suspiciousKeywords": [
+          "verify",
+          "account"
+        ],
+        "maliciousPatterns": [
+          "verify-"
+        ],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": true,
+        "riskFactors": []
+      },
+      "securityChecks": {
+        "domainAge": null,
+        "sslCertificate": {
+          "hasSSL": true,
+          "status": "valid",
+          "recommendation": "SSL certificate present"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown - exercise caution"
+        },
+        "blacklistStatus": "unknown"
+      },
+      "explanation": {
+        "summary": "Moderate threat detected with 2 risk factors. Exercise caution.",
+        "riskFactors": [
+          "verify",
+          "account",
+          "verify-"
+        ],
+        "explanations": [
+          {
+            "category": "Suspicious Keywords",
+            "severity": "medium",
+            "impact": 24,
+            "description": "Contains 2 suspicious keywords",
+            "details": "Keywords: verify, account",
+            "recommendation": "Be wary of URLs containing security-related keywords"
+          },
+          {
+            "category": "Phishing Indicators",
+            "severity": "high",
+            "impact": 25,
+            "description": "Contains patterns commonly used in phishing URLs",
+            "details": "Patterns: verify-",
+            "recommendation": "These patterns are frequently used to impersonate legitimate services"
+          }
+        ],
+        "recommendation": {
+          "level": "MEDIUM RISK",
+          "action": "PROCEED WITH EXTREME CAUTION",
+          "message": "This content shows suspicious characteristics. Verify the sender through alternative means before taking any action.",
+          "color": "#ffc107"
+        },
+        "detailedBreakdown": {
+          "suspiciousKeywords": 24,
+          "phishingIndicators": 25
+        }
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-13T06:14:02.966Z",
+        "processingTime": 1773382442966,
+        "version": "2.0.0"
+      }
+    }
+  },
+  {
+    "id": 1773382452615,
+    "timestamp": "2026-03-13T06:14:12.615Z",
+    "url": "https://xecureone.com/verify-account",
+    "threatScore": 49,
+    "classification": "Suspicious",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "https://xecureone.com/verify-account",
+      "normalizedUrl": "https://xecureone.com/verify-account",
+      "classification": "Suspicious",
+      "threatScore": 49,
+      "confidence": {
+        "level": "Medium",
+        "description": "Some indicators detected"
+      },
+      "urlComponents": {
+        "protocol": "https:",
+        "domain": "xecureone.com",
+        "path": "/verify-account",
+        "hasPort": false,
+        "httpsUsed": true
+      },
+      "features": {
+        "length": 36,
+        "subdomainCount": 0,
+        "pathDepth": 1,
+        "specialCharCount": 1,
+        "suspiciousKeywords": [
+          "verify",
+          "account"
+        ],
+        "maliciousPatterns": [
+          "verify-"
+        ],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": true,
+        "riskFactors": []
+      },
+      "securityChecks": {
+        "domainAge": null,
+        "sslCertificate": {
+          "hasSSL": true,
+          "status": "valid",
+          "recommendation": "SSL certificate present"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown - exercise caution"
+        },
+        "blacklistStatus": "unknown"
+      },
+      "explanation": {
+        "summary": "Moderate threat detected with 2 risk factors. Exercise caution.",
+        "riskFactors": [
+          "verify",
+          "account",
+          "verify-"
+        ],
+        "explanations": [
+          {
+            "category": "Suspicious Keywords",
+            "severity": "medium",
+            "impact": 24,
+            "description": "Contains 2 suspicious keywords",
+            "details": "Keywords: verify, account",
+            "recommendation": "Be wary of URLs containing security-related keywords"
+          },
+          {
+            "category": "Phishing Indicators",
+            "severity": "high",
+            "impact": 25,
+            "description": "Contains patterns commonly used in phishing URLs",
+            "details": "Patterns: verify-",
+            "recommendation": "These patterns are frequently used to impersonate legitimate services"
+          }
+        ],
+        "recommendation": {
+          "level": "MEDIUM RISK",
+          "action": "PROCEED WITH EXTREME CAUTION",
+          "message": "This content shows suspicious characteristics. Verify the sender through alternative means before taking any action.",
+          "color": "#ffc107"
+        },
+        "detailedBreakdown": {
+          "suspiciousKeywords": 24,
+          "phishingIndicators": 25
+        }
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-13T06:14:12.614Z",
+        "processingTime": 1773382452614,
+        "version": "2.0.0"
+      }
+    }
+  },
+  {
+    "id": 1773382456374,
+    "timestamp": "2026-03-13T06:14:16.374Z",
+    "url": "https://xecureone.com/verify-account",
+    "threatScore": 49,
+    "classification": "Suspicious",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "https://xecureone.com/verify-account",
+      "normalizedUrl": "https://xecureone.com/verify-account",
+      "classification": "Suspicious",
+      "threatScore": 49,
+      "confidence": {
+        "level": "Medium",
+        "description": "Some indicators detected"
+      },
+      "urlComponents": {
+        "protocol": "https:",
+        "domain": "xecureone.com",
+        "path": "/verify-account",
+        "hasPort": false,
+        "httpsUsed": true
+      },
+      "features": {
+        "length": 36,
+        "subdomainCount": 0,
+        "pathDepth": 1,
+        "specialCharCount": 1,
+        "suspiciousKeywords": [
+          "verify",
+          "account"
+        ],
+        "maliciousPatterns": [
+          "verify-"
+        ],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": true,
+        "riskFactors": []
+      },
+      "securityChecks": {
+        "domainAge": null,
+        "sslCertificate": {
+          "hasSSL": true,
+          "status": "valid",
+          "recommendation": "SSL certificate present"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown - exercise caution"
+        },
+        "blacklistStatus": "unknown"
+      },
+      "explanation": {
+        "summary": "Moderate threat detected with 2 risk factors. Exercise caution.",
+        "riskFactors": [
+          "verify",
+          "account",
+          "verify-"
+        ],
+        "explanations": [
+          {
+            "category": "Suspicious Keywords",
+            "severity": "medium",
+            "impact": 24,
+            "description": "Contains 2 suspicious keywords",
+            "details": "Keywords: verify, account",
+            "recommendation": "Be wary of URLs containing security-related keywords"
+          },
+          {
+            "category": "Phishing Indicators",
+            "severity": "high",
+            "impact": 25,
+            "description": "Contains patterns commonly used in phishing URLs",
+            "details": "Patterns: verify-",
+            "recommendation": "These patterns are frequently used to impersonate legitimate services"
+          }
+        ],
+        "recommendation": {
+          "level": "MEDIUM RISK",
+          "action": "PROCEED WITH EXTREME CAUTION",
+          "message": "This content shows suspicious characteristics. Verify the sender through alternative means before taking any action.",
+          "color": "#ffc107"
+        },
+        "detailedBreakdown": {
+          "suspiciousKeywords": 24,
+          "phishingIndicators": 25
+        }
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-13T06:14:16.373Z",
+        "processingTime": 1773382456373,
+        "version": "2.0.0"
+      }
+    }
+  },
+  {
+    "id": 1773382484495,
+    "timestamp": "2026-03-13T06:14:44.495Z",
+    "url": "http://xecure.online/verify",
+    "threatScore": 22,
+    "classification": "Safe",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://xecure.online/verify",
+      "normalizedUrl": "http://xecure.online/verify",
+      "classification": "Safe",
+      "threatScore": 22,
+      "confidence": {
+        "level": "Low",
+        "description": "Few or no indicators detected"
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "xecure.online",
+        "path": "/verify",
+        "hasPort": false,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 27,
+        "subdomainCount": 0,
+        "pathDepth": 1,
+        "specialCharCount": 0,
+        "suspiciousKeywords": [
+          "verify"
+        ],
+        "maliciousPatterns": [],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": false,
+        "riskFactors": [
+          "No HTTPS"
+        ]
+      },
+      "securityChecks": {
+        "domainAge": null,
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate - avoid entering sensitive data"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown - exercise caution"
+        },
+        "blacklistStatus": "unknown"
+      },
+      "explanation": {
+        "summary": "Low threat detected with 2 risk factors. Content appears safe.",
+        "riskFactors": [
+          "verify"
+        ],
+        "explanations": [
+          {
+            "category": "Suspicious Keywords",
+            "severity": "low",
+            "impact": 12,
+            "description": "Contains 1 suspicious keywords",
+            "details": "Keywords: verify",
+            "recommendation": "Be wary of URLs containing security-related keywords"
+          },
+          {
+            "category": "No HTTPS Encryption",
+            "severity": "medium",
+            "impact": 10,
+            "description": "Does not use secure HTTPS protocol",
+            "details": "HTTPS provides encryption and authentication",
+            "recommendation": "Avoid entering sensitive information on non-HTTPS sites"
+          }
+        ],
+        "recommendation": {
+          "level": "LOW RISK",
+          "action": "LIKELY SAFE",
+          "message": "This content appears to be legitimate, but always remain vigilant when sharing personal information.",
+          "color": "#28a745"
+        },
+        "detailedBreakdown": {
+          "suspiciousKeywords": 12,
+          "noHttps": 10
+        }
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-13T06:14:44.495Z",
+        "processingTime": 1773382484495,
+        "version": "2.0.0"
+      }
+    }
+  },
+  {
+    "id": 1773719195728,
+    "timestamp": "2026-03-17T03:46:35.728Z",
+    "url": "http://paypal-security.com/verify-account-login-update-secure",
+    "threatScore": 100,
+    "classification": "Malicious",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://paypal-security.com/verify-account-login-update-secure",
+      "normalizedUrl": "http://paypal-security.com/verify-account-login-update-secure",
+      "classification": "Malicious",
+      "threatScore": 100,
+      "confidence": {
+        "level": "High",
+        "description": "Several indicators detected"
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "paypal-security.com",
+        "path": "/verify-account-login-update-secure",
+        "hasPort": false,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 61,
+        "subdomainCount": 0,
+        "pathDepth": 1,
+        "specialCharCount": 5,
+        "suspiciousKeywords": [
+          "login",
+          "verify",
+          "update",
+          "secure",
+          "paypal",
+          "account",
+          "security"
+        ],
+        "maliciousPatterns": [
+          "verify-",
+          "update-",
+          "login-",
+          "account-",
+          "paypal-"
+        ],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": true,
+        "riskFactors": [
+          "No HTTPS"
+        ]
+      },
+      "securityChecks": {
+        "domainAge": null,
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate - avoid entering sensitive data"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        },
+        "reputation": {
+          "score": "bad",
+          "confidence": "high",
+          "description": "Domain appears to impersonate legitimate service"
+        },
+        "blacklistStatus": "unknown"
+      },
+      "explanation": {
+        "summary": "High threat detected with 3 risk factors. This content is likely malicious.",
+        "riskFactors": [
+          "login",
+          "verify",
+          "update",
+          "verify-",
+          "update-",
+          "login-",
+          "account-",
+          "paypal-"
+        ],
+        "explanations": [
+          {
+            "category": "Suspicious Keywords",
+            "severity": "high",
+            "impact": 35,
+            "description": "Contains 7 suspicious keywords",
+            "details": "Keywords: login, verify, update, secure, paypal, account, security",
+            "recommendation": "Be wary of URLs containing security-related keywords"
+          },
+          {
+            "category": "Phishing Indicators",
+            "severity": "high",
+            "impact": 30,
+            "description": "Contains patterns commonly used in phishing URLs",
+            "details": "Patterns: verify-, update-, login-, account-, paypal-",
+            "recommendation": "These patterns are frequently used to impersonate legitimate services"
+          },
+          {
+            "category": "No HTTPS Encryption",
+            "severity": "medium",
+            "impact": 15,
+            "description": "Does not use secure HTTPS protocol",
+            "details": "HTTPS provides encryption and authentication",
+            "recommendation": "Avoid entering sensitive information on non-HTTPS sites"
+          }
+        ],
+        "recommendation": {
+          "level": "HIGH RISK",
+          "action": "DO NOT INTERACT",
+          "message": "This content appears to be malicious. Do not click links, download attachments, or provide any information.",
+          "color": "#dc3545"
+        },
+        "detailedBreakdown": {
+          "suspiciousKeywords": 35,
+          "phishingIndicators": 30,
+          "noHttps": 15
+        }
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T03:46:35.722Z",
+        "processingTime": 1773719195722,
+        "version": "2.0.0"
+      }
+    }
+  },
+  {
+    "id": 1773719311763,
+    "timestamp": "2026-03-17T03:48:31.763Z",
+    "url": "http://192.168.1.100:8080/login/verify",
+    "threatScore": 100,
+    "classification": "Malicious",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://192.168.1.100:8080/login/verify",
+      "normalizedUrl": "http://192.168.1.100:8080/login/verify",
+      "classification": "Malicious",
+      "threatScore": 100,
+      "confidence": {
+        "level": "High",
+        "description": "Several indicators detected"
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "192.168.1.100",
+        "path": "/login/verify",
+        "hasPort": true,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 38,
+        "subdomainCount": 2,
+        "pathDepth": 2,
+        "specialCharCount": 0,
+        "suspiciousKeywords": [
+          "login",
+          "verify"
+        ],
+        "maliciousPatterns": [],
+        "hasIP": true,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": false,
+        "riskFactors": [
+          "Uses IP address",
+          "No HTTPS",
+          "Suspicious port"
+        ]
+      },
+      "securityChecks": {
+        "domainAge": null,
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate - avoid entering sensitive data"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown - exercise caution"
+        },
+        "blacklistStatus": "unknown"
+      },
+      "explanation": {
+        "summary": "High threat detected with 4 risk factors. This content is likely malicious.",
+        "riskFactors": [
+          "IP Address",
+          "login",
+          "verify"
+        ],
+        "explanations": [
+          {
+            "category": "IP Address Usage",
+            "severity": "high",
+            "impact": 50,
+            "description": "Uses IP address instead of domain name",
+            "details": "IP address: 192.168.1.100",
+            "recommendation": "Legitimate websites use domain names, not IP addresses"
+          },
+          {
+            "category": "Suspicious Keywords",
+            "severity": "high",
+            "impact": 30,
+            "description": "Contains 2 suspicious keywords",
+            "details": "Keywords: login, verify",
+            "recommendation": "Be wary of URLs containing security-related keywords"
+          },
+          {
+            "category": "No HTTPS Encryption",
+            "severity": "medium",
+            "impact": 15,
+            "description": "Does not use secure HTTPS protocol",
+            "details": "HTTPS provides encryption and authentication",
+            "recommendation": "Avoid entering sensitive information on non-HTTPS sites"
+          },
+          {
+            "category": "Suspicious Port",
+            "severity": "medium",
+            "impact": 20,
+            "description": "Uses a port commonly associated with development or testing",
+            "details": "Legitimate websites typically use standard ports (80, 443)",
+            "recommendation": "Be cautious of URLs using non-standard ports"
+          }
+        ],
+        "recommendation": {
+          "level": "HIGH RISK",
+          "action": "DO NOT INTERACT",
+          "message": "This content appears to be malicious. Do not click links, download attachments, or provide any information.",
+          "color": "#dc3545"
+        },
+        "detailedBreakdown": {
+          "ipAddress": 50,
+          "suspiciousKeywords": 30,
+          "noHttps": 15,
+          "suspiciousPort": 20
+        }
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T03:48:31.763Z",
+        "processingTime": 1773719311763,
+        "version": "2.0.0"
+      }
+    }
+  },
+  {
+    "id": 1773728257407,
+    "timestamp": "2026-03-17T06:17:37.407Z",
+    "url": "http://192.168.1.100:8080/login/verify",
+    "threatScore": 100,
+    "classification": "Malicious",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://192.168.1.100:8080/login/verify",
+      "normalizedUrl": "http://192.168.1.100:8080/login/verify",
+      "classification": "Malicious",
+      "threatScore": 100,
+      "confidence": {
+        "level": "High",
+        "description": "Several indicators detected"
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "192.168.1.100",
+        "path": "/login/verify",
+        "hasPort": true,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 38,
+        "subdomainCount": 2,
+        "pathDepth": 2,
+        "specialCharCount": 0,
+        "suspiciousKeywords": [
+          "login",
+          "verify"
+        ],
+        "maliciousPatterns": [],
+        "hasIP": true,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": false,
+        "riskFactors": [
+          "Uses IP address",
+          "No HTTPS",
+          "Suspicious port"
+        ]
+      },
+      "securityChecks": {
+        "domainAge": null,
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate - avoid entering sensitive data"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown - exercise caution"
+        },
+        "blacklistStatus": "unknown"
+      },
+      "explanation": {
+        "summary": "High threat detected with 4 risk factors. This content is likely malicious.",
+        "riskFactors": [
+          "IP Address",
+          "login",
+          "verify"
+        ],
+        "explanations": [
+          {
+            "category": "IP Address Usage",
+            "severity": "high",
+            "impact": 50,
+            "description": "Uses IP address instead of domain name",
+            "details": "IP address: 192.168.1.100",
+            "recommendation": "Legitimate websites use domain names, not IP addresses"
+          },
+          {
+            "category": "Suspicious Keywords",
+            "severity": "high",
+            "impact": 30,
+            "description": "Contains 2 suspicious keywords",
+            "details": "Keywords: login, verify",
+            "recommendation": "Be wary of URLs containing security-related keywords"
+          },
+          {
+            "category": "No HTTPS Encryption",
+            "severity": "medium",
+            "impact": 15,
+            "description": "Does not use secure HTTPS protocol",
+            "details": "HTTPS provides encryption and authentication",
+            "recommendation": "Avoid entering sensitive information on non-HTTPS sites"
+          },
+          {
+            "category": "Suspicious Port",
+            "severity": "medium",
+            "impact": 20,
+            "description": "Uses a port commonly associated with development or testing",
+            "details": "Legitimate websites typically use standard ports (80, 443)",
+            "recommendation": "Be cautious of URLs using non-standard ports"
+          }
+        ],
+        "recommendation": {
+          "level": "HIGH RISK",
+          "action": "DO NOT INTERACT",
+          "message": "This content appears to be malicious. Do not click links, download attachments, or provide any information.",
+          "color": "#dc3545"
+        },
+        "detailedBreakdown": {
+          "ipAddress": 50,
+          "suspiciousKeywords": 30,
+          "noHttps": 15,
+          "suspiciousPort": 20
+        }
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T06:17:37.405Z",
+        "processingTime": 1773728257405,
+        "version": "2.0.0"
+      }
+    }
+  },
+  {
+    "id": 1773728668081,
+    "timestamp": "2026-03-17T06:24:28.081Z",
+    "url": "http://paypal-security.com/verify-account-login-update-secure",
+    "threatScore": 100,
+    "classification": "Malicious",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://paypal-security.com/verify-account-login-update-secure",
+      "normalizedUrl": "http://paypal-security.com/verify-account-login-update-secure",
+      "classification": "Malicious",
+      "threatScore": 100,
+      "confidence": {
+        "level": "High",
+        "description": "Several indicators detected"
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "paypal-security.com",
+        "path": "/verify-account-login-update-secure",
+        "hasPort": false,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 61,
+        "subdomainCount": 0,
+        "pathDepth": 1,
+        "specialCharCount": 5,
+        "suspiciousKeywords": [
+          "login",
+          "verify",
+          "update",
+          "secure",
+          "paypal",
+          "account",
+          "security"
+        ],
+        "maliciousPatterns": [
+          "verify-",
+          "update-",
+          "login-",
+          "account-",
+          "paypal-"
+        ],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": true,
+        "riskFactors": [
+          "No HTTPS"
+        ]
+      },
+      "securityChecks": {
+        "domainAge": null,
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate - avoid entering sensitive data"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        },
+        "reputation": {
+          "score": "bad",
+          "confidence": "high",
+          "description": "Domain appears to impersonate legitimate service"
+        },
+        "blacklistStatus": "unknown"
+      },
+      "explanation": {
+        "summary": "High threat detected with 3 risk factors. This content is likely malicious.",
+        "riskFactors": [
+          "login",
+          "verify",
+          "update",
+          "verify-",
+          "update-",
+          "login-",
+          "account-",
+          "paypal-"
+        ],
+        "explanations": [
+          {
+            "category": "Suspicious Keywords",
+            "severity": "high",
+            "impact": 35,
+            "description": "Contains 7 suspicious keywords",
+            "details": "Keywords: login, verify, update, secure, paypal, account, security",
+            "recommendation": "Be wary of URLs containing security-related keywords"
+          },
+          {
+            "category": "Phishing Indicators",
+            "severity": "high",
+            "impact": 30,
+            "description": "Contains patterns commonly used in phishing URLs",
+            "details": "Patterns: verify-, update-, login-, account-, paypal-",
+            "recommendation": "These patterns are frequently used to impersonate legitimate services"
+          },
+          {
+            "category": "No HTTPS Encryption",
+            "severity": "medium",
+            "impact": 15,
+            "description": "Does not use secure HTTPS protocol",
+            "details": "HTTPS provides encryption and authentication",
+            "recommendation": "Avoid entering sensitive information on non-HTTPS sites"
+          }
+        ],
+        "recommendation": {
+          "level": "HIGH RISK",
+          "action": "DO NOT INTERACT",
+          "message": "This content appears to be malicious. Do not click links, download attachments, or provide any information.",
+          "color": "#dc3545"
+        },
+        "detailedBreakdown": {
+          "suspiciousKeywords": 35,
+          "phishingIndicators": 30,
+          "noHttps": 15
+        }
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T06:24:28.079Z",
+        "processingTime": 1773728668079,
+        "version": "2.0.0"
+      }
+    }
+  },
+  {
+    "id": 1773729356962,
+    "timestamp": "2026-03-17T06:35:56.962Z",
+    "url": "http://paypal-security.verify-account.com/login/confirm?redirect=update-billing",
+    "threatScore": 48,
+    "classification": "Suspicious",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://paypal-security.verify-account.com/login/confirm?redirect=update-billing",
+      "normalizedUrl": "http://paypal-security.verify-account.com/login/confirm?redirect=update-billing",
+      "classification": "Suspicious",
+      "threatScore": 48,
+      "confidence": {
+        "level": "Low",
+        "value": 8
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "paypal-security.verify-account.com",
+        "path": "/login/confirm",
+        "hasPort": false,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 79,
+        "subdomainCount": 1,
+        "pathDepth": 2,
+        "specialCharCount": 5,
+        "suspiciousKeywords": [
+          "Brand impersonation: \"paypal\"",
+          "URL shortener hides destination",
+          "Open redirect parameter detected",
+          "No HTTPS encryption"
+        ],
+        "maliciousPatterns": [
+          "Brand impersonation: \"paypal\""
+        ],
+        "hasIP": false,
+        "isShortener": true,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": true,
+        "riskFactors": [
+          "Brand impersonation: \"paypal\"",
+          "URL shortener hides destination",
+          "Open redirect parameter detected",
+          "No HTTPS encryption"
+        ]
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate — avoid entering sensitive data"
+        },
+        "reputation": {
+          "score": "bad",
+          "confidence": "high",
+          "description": "Domain appears to impersonate a legitimate service"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": true,
+          "riskLevel": "medium",
+          "description": "URL contains redirect parameters"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML",
+        "rawScore": 48,
+        "confidence": {
+          "level": "Low",
+          "value": 8
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 25,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 100,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 100,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "⚠️ Random Forest flagged this URL as SUSPICIOUS (score: 48/100). Proceed with caution.",
+        "riskFactors": [
+          {
+            "title": "Brand impersonation: \"paypal\"",
+            "description": "Severity: critical — detected by Random Forest ensemble",
+            "severity": "critical"
+          },
+          {
+            "title": "URL shortener hides destination",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          },
+          {
+            "title": "Open redirect parameter detected",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ],
+        "explanations": [
+          "Severity: critical — detected by Random Forest ensemble",
+          "Severity: high — detected by Random Forest ensemble",
+          "Severity: high — detected by Random Forest ensemble",
+          "Severity: medium — detected by Random Forest ensemble"
+        ],
+        "recommendation": "Approach with caution. Verify the website legitimacy before entering any personal data.",
+        "detailedBreakdown": [
+          {
+            "title": "Brand impersonation: \"paypal\"",
+            "description": "Severity: critical — detected by Random Forest ensemble",
+            "severity": "critical"
+          },
+          {
+            "title": "URL shortener hides destination",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          },
+          {
+            "title": "Open redirect parameter detected",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ]
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T06:35:56.961Z",
+        "processingTime": 3,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773729589588,
+    "timestamp": "2026-03-17T06:39:49.588Z",
+    "url": "http://paypal-security.com/verify-account-login-update-secure",
+    "threatScore": 33,
+    "classification": "Suspicious",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://paypal-security.com/verify-account-login-update-secure",
+      "normalizedUrl": "http://paypal-security.com/verify-account-login-update-secure",
+      "classification": "Suspicious",
+      "threatScore": 33,
+      "confidence": {
+        "level": "Low",
+        "value": 23
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "paypal-security.com",
+        "path": "/verify-account-login-update-secure",
+        "hasPort": false,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 61,
+        "subdomainCount": 0,
+        "pathDepth": 1,
+        "specialCharCount": 5,
+        "suspiciousKeywords": [
+          "Brand impersonation: \"paypal\"",
+          "No HTTPS encryption"
+        ],
+        "maliciousPatterns": [
+          "Brand impersonation: \"paypal\""
+        ],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": true,
+        "riskFactors": [
+          "Brand impersonation: \"paypal\"",
+          "No HTTPS encryption"
+        ]
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate — avoid entering sensitive data"
+        },
+        "reputation": {
+          "score": "bad",
+          "confidence": "high",
+          "description": "Domain appears to impersonate a legitimate service"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML",
+        "rawScore": 33,
+        "confidence": {
+          "level": "Low",
+          "value": 23
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 25,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 100,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "⚠️ Random Forest flagged this URL as SUSPICIOUS (score: 33/100). Proceed with caution.",
+        "riskFactors": [
+          {
+            "title": "Brand impersonation: \"paypal\"",
+            "description": "Severity: critical — detected by Random Forest ensemble",
+            "severity": "critical"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ],
+        "explanations": [
+          "Severity: critical — detected by Random Forest ensemble",
+          "Severity: medium — detected by Random Forest ensemble"
+        ],
+        "recommendation": "Approach with caution. Verify the website legitimacy before entering any personal data.",
+        "detailedBreakdown": [
+          {
+            "title": "Brand impersonation: \"paypal\"",
+            "description": "Severity: critical — detected by Random Forest ensemble",
+            "severity": "critical"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ]
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T06:39:49.586Z",
+        "processingTime": 1,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773729602048,
+    "timestamp": "2026-03-17T06:40:02.048Z",
+    "url": "http://pypal-security.com/verify-account-login-update-secure",
+    "threatScore": 16,
+    "classification": "Safe",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://pypal-security.com/verify-account-login-update-secure",
+      "normalizedUrl": "http://pypal-security.com/verify-account-login-update-secure",
+      "classification": "Safe",
+      "threatScore": 16,
+      "confidence": {
+        "level": "Medium",
+        "value": 70
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "pypal-security.com",
+        "path": "/verify-account-login-update-secure",
+        "hasPort": false,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 60,
+        "subdomainCount": 0,
+        "pathDepth": 1,
+        "specialCharCount": 5,
+        "suspiciousKeywords": [
+          "No HTTPS encryption"
+        ],
+        "maliciousPatterns": [],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": true,
+        "riskFactors": [
+          "No HTTPS encryption"
+        ]
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate — avoid entering sensitive data"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown — exercise caution"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML",
+        "rawScore": 16,
+        "confidence": {
+          "level": "Medium",
+          "value": 70
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 25,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 35,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "✅ Random Forest classified this URL as SAFE (score: 16/100). No major threats detected.",
+        "riskFactors": [
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ],
+        "explanations": [
+          "Severity: medium — detected by Random Forest ensemble"
+        ],
+        "recommendation": "URL appears safe. Always verify the domain before sharing sensitive information.",
+        "detailedBreakdown": [
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ]
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T06:40:02.043Z",
+        "processingTime": 1,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773729610686,
+    "timestamp": "2026-03-17T06:40:10.686Z",
+    "url": "http://pypal-security.xyz/verify-account-login-update-secure",
+    "threatScore": 26,
+    "classification": "Safe",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://pypal-security.xyz/verify-account-login-update-secure",
+      "normalizedUrl": "http://pypal-security.xyz/verify-account-login-update-secure",
+      "classification": "Safe",
+      "threatScore": 26,
+      "confidence": {
+        "level": "Low",
+        "value": 42
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "pypal-security.xyz",
+        "path": "/verify-account-login-update-secure",
+        "hasPort": false,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 60,
+        "subdomainCount": 0,
+        "pathDepth": 1,
+        "specialCharCount": 5,
+        "suspiciousKeywords": [
+          "High-risk TLD: xyz",
+          "No HTTPS encryption"
+        ],
+        "maliciousPatterns": [],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": true,
+        "riskFactors": [
+          "High-risk TLD: xyz",
+          "No HTTPS encryption"
+        ]
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate — avoid entering sensitive data"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown — exercise caution"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML",
+        "rawScore": 26,
+        "confidence": {
+          "level": "Low",
+          "value": 42
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 25,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 75,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "✅ Random Forest classified this URL as SAFE (score: 26/100). No major threats detected.",
+        "riskFactors": [
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ],
+        "explanations": [
+          "Severity: high — detected by Random Forest ensemble",
+          "Severity: medium — detected by Random Forest ensemble"
+        ],
+        "recommendation": "URL appears safe. Always verify the domain before sharing sensitive information.",
+        "detailedBreakdown": [
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ]
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T06:40:10.685Z",
+        "processingTime": 0,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773729638153,
+    "timestamp": "2026-03-17T06:40:38.153Z",
+    "url": "http://amzon.xyz/verify-account-login-update-secure",
+    "threatScore": 26,
+    "classification": "Safe",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://amzon.xyz/verify-account-login-update-secure",
+      "normalizedUrl": "http://amzon.xyz/verify-account-login-update-secure",
+      "classification": "Safe",
+      "threatScore": 26,
+      "confidence": {
+        "level": "Low",
+        "value": 42
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "amzon.xyz",
+        "path": "/verify-account-login-update-secure",
+        "hasPort": false,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 51,
+        "subdomainCount": 0,
+        "pathDepth": 1,
+        "specialCharCount": 4,
+        "suspiciousKeywords": [
+          "High-risk TLD: xyz",
+          "No HTTPS encryption"
+        ],
+        "maliciousPatterns": [],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": true,
+        "riskFactors": [
+          "High-risk TLD: xyz",
+          "No HTTPS encryption"
+        ]
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate — avoid entering sensitive data"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown — exercise caution"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML",
+        "rawScore": 26,
+        "confidence": {
+          "level": "Low",
+          "value": 42
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 25,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 75,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "✅ Random Forest classified this URL as SAFE (score: 26/100). No major threats detected.",
+        "riskFactors": [
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ],
+        "explanations": [
+          "Severity: high — detected by Random Forest ensemble",
+          "Severity: medium — detected by Random Forest ensemble"
+        ],
+        "recommendation": "URL appears safe. Always verify the domain before sharing sensitive information.",
+        "detailedBreakdown": [
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ]
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T06:40:38.150Z",
+        "processingTime": 1,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773729644908,
+    "timestamp": "2026-03-17T06:40:44.908Z",
+    "url": "http://amazon.xyz/verify-account-login-update-secure",
+    "threatScore": 33,
+    "classification": "Suspicious",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://amazon.xyz/verify-account-login-update-secure",
+      "normalizedUrl": "http://amazon.xyz/verify-account-login-update-secure",
+      "classification": "Suspicious",
+      "threatScore": 33,
+      "confidence": {
+        "level": "Low",
+        "value": 23
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "amazon.xyz",
+        "path": "/verify-account-login-update-secure",
+        "hasPort": false,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 52,
+        "subdomainCount": 0,
+        "pathDepth": 1,
+        "specialCharCount": 4,
+        "suspiciousKeywords": [
+          "Brand impersonation: \"amazon\"",
+          "High-risk TLD: xyz",
+          "No HTTPS encryption"
+        ],
+        "maliciousPatterns": [
+          "Brand impersonation: \"amazon\""
+        ],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": true,
+        "riskFactors": [
+          "Brand impersonation: \"amazon\"",
+          "High-risk TLD: xyz",
+          "No HTTPS encryption"
+        ]
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate — avoid entering sensitive data"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown — exercise caution"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML",
+        "rawScore": 33,
+        "confidence": {
+          "level": "Low",
+          "value": 23
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 25,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 100,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "⚠️ Random Forest flagged this URL as SUSPICIOUS (score: 33/100). Proceed with caution.",
+        "riskFactors": [
+          {
+            "title": "Brand impersonation: \"amazon\"",
+            "description": "Severity: critical — detected by Random Forest ensemble",
+            "severity": "critical"
+          },
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ],
+        "explanations": [
+          "Severity: critical — detected by Random Forest ensemble",
+          "Severity: high — detected by Random Forest ensemble",
+          "Severity: medium — detected by Random Forest ensemble"
+        ],
+        "recommendation": "Approach with caution. Verify the website legitimacy before entering any personal data.",
+        "detailedBreakdown": [
+          {
+            "title": "Brand impersonation: \"amazon\"",
+            "description": "Severity: critical — detected by Random Forest ensemble",
+            "severity": "critical"
+          },
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ]
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T06:40:44.906Z",
+        "processingTime": 0,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773729657457,
+    "timestamp": "2026-03-17T06:40:57.457Z",
+    "url": "https://amazon.xyz/verify-account-login-update-secure",
+    "threatScore": 25,
+    "classification": "Safe",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "https://amazon.xyz/verify-account-login-update-secure",
+      "normalizedUrl": "https://amazon.xyz/verify-account-login-update-secure",
+      "classification": "Safe",
+      "threatScore": 25,
+      "confidence": {
+        "level": "Low",
+        "value": 20
+      },
+      "urlComponents": {
+        "protocol": "https:",
+        "domain": "amazon.xyz",
+        "path": "/verify-account-login-update-secure",
+        "hasPort": false,
+        "httpsUsed": true
+      },
+      "features": {
+        "length": 53,
+        "subdomainCount": 0,
+        "pathDepth": 1,
+        "specialCharCount": 4,
+        "suspiciousKeywords": [
+          "Brand impersonation: \"amazon\"",
+          "High-risk TLD: xyz"
+        ],
+        "maliciousPatterns": [
+          "Brand impersonation: \"amazon\""
+        ],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": true,
+        "riskFactors": [
+          "Brand impersonation: \"amazon\"",
+          "High-risk TLD: xyz"
+        ]
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": true,
+          "status": "valid",
+          "recommendation": "SSL certificate present"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown — exercise caution"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML",
+        "rawScore": 25,
+        "confidence": {
+          "level": "Low",
+          "value": 20
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 0,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 100,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "✅ Random Forest classified this URL as SAFE (score: 25/100). No major threats detected.",
+        "riskFactors": [
+          {
+            "title": "Brand impersonation: \"amazon\"",
+            "description": "Severity: critical — detected by Random Forest ensemble",
+            "severity": "critical"
+          },
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          }
+        ],
+        "explanations": [
+          "Severity: critical — detected by Random Forest ensemble",
+          "Severity: high — detected by Random Forest ensemble"
+        ],
+        "recommendation": "URL appears safe. Always verify the domain before sharing sensitive information.",
+        "detailedBreakdown": [
+          {
+            "title": "Brand impersonation: \"amazon\"",
+            "description": "Severity: critical — detected by Random Forest ensemble",
+            "severity": "critical"
+          },
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          }
+        ]
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T06:40:57.455Z",
+        "processingTime": 1,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773733183870,
+    "timestamp": "2026-03-17T07:39:43.870Z",
+    "url": "http://192.168.1.100:8080/login/verify",
+    "threatScore": 39,
+    "classification": "Suspicious",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://192.168.1.100:8080/login/verify",
+      "normalizedUrl": "http://192.168.1.100:8080/login/verify",
+      "classification": "Suspicious",
+      "threatScore": 39,
+      "confidence": {
+        "level": "Low",
+        "value": 22
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "192.168.1.100",
+        "path": "/login/verify",
+        "hasPort": true,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 38,
+        "subdomainCount": 2,
+        "pathDepth": 2,
+        "specialCharCount": 0,
+        "suspiciousKeywords": [
+          "IP address used as domain",
+          "No HTTPS encryption"
+        ],
+        "maliciousPatterns": [
+          "IP address used as domain"
+        ],
+        "hasIP": true,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": false,
+        "riskFactors": [
+          "IP address used as domain",
+          "No HTTPS encryption"
+        ]
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate — avoid entering sensitive data"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown — exercise caution"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML v3.1",
+        "rawScore": 39,
+        "confidence": {
+          "level": "Low",
+          "value": 22
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 100,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 35,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "⚠️ Random Forest flagged this URL as SUSPICIOUS (score: 39/100). Proceed with caution.",
+        "riskFactors": [
+          {
+            "title": "IP address used as domain",
+            "description": "Severity: critical — detected by Random Forest ensemble",
+            "severity": "critical"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ],
+        "explanations": [
+          "Severity: critical — detected by Random Forest ensemble",
+          "Severity: medium — detected by Random Forest ensemble"
+        ],
+        "recommendation": "Approach with caution. Verify the website before entering any personal data.",
+        "detailedBreakdown": [
+          {
+            "title": "IP address used as domain",
+            "description": "Severity: critical — detected by Random Forest ensemble",
+            "severity": "critical"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ]
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T07:39:43.870Z",
+        "processingTime": 4,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773733211635,
+    "timestamp": "2026-03-17T07:40:11.635Z",
+    "url": "http://lamazon.xyz",
+    "threatScore": 33,
+    "classification": "Suspicious",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://lamazon.xyz",
+      "normalizedUrl": "http://lamazon.xyz/",
+      "classification": "Suspicious",
+      "threatScore": 33,
+      "confidence": {
+        "level": "Low",
+        "value": 23
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "lamazon.xyz",
+        "path": "/",
+        "hasPort": false,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 19,
+        "subdomainCount": 0,
+        "pathDepth": 0,
+        "specialCharCount": 0,
+        "suspiciousKeywords": [
+          "Brand impersonation: \"amazon\"",
+          "High-risk TLD: xyz",
+          "No HTTPS encryption"
+        ],
+        "maliciousPatterns": [
+          "Brand impersonation: \"amazon\""
+        ],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": false,
+        "riskFactors": [
+          "Brand impersonation: \"amazon\"",
+          "High-risk TLD: xyz",
+          "No HTTPS encryption"
+        ]
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate — avoid entering sensitive data"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown — exercise caution"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML v3.1",
+        "rawScore": 33,
+        "confidence": {
+          "level": "Low",
+          "value": 23
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 25,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 100,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "⚠️ Random Forest flagged this URL as SUSPICIOUS (score: 33/100). Proceed with caution.",
+        "riskFactors": [
+          {
+            "title": "Brand impersonation: \"amazon\"",
+            "description": "Severity: critical — detected by Random Forest ensemble",
+            "severity": "critical"
+          },
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ],
+        "explanations": [
+          "Severity: critical — detected by Random Forest ensemble",
+          "Severity: high — detected by Random Forest ensemble",
+          "Severity: medium — detected by Random Forest ensemble"
+        ],
+        "recommendation": "Approach with caution. Verify the website before entering any personal data.",
+        "detailedBreakdown": [
+          {
+            "title": "Brand impersonation: \"amazon\"",
+            "description": "Severity: critical — detected by Random Forest ensemble",
+            "severity": "critical"
+          },
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ]
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T07:40:11.634Z",
+        "processingTime": 0,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773733735847,
+    "timestamp": "2026-03-17T07:48:55.847Z",
+    "url": "https://microsoft-support.ml/urgent-security-update",
+    "threatScore": 25,
+    "classification": "Safe",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "https://microsoft-support.ml/urgent-security-update",
+      "normalizedUrl": "https://microsoft-support.ml/urgent-security-update",
+      "classification": "Safe",
+      "threatScore": 25,
+      "confidence": {
+        "level": "Low",
+        "value": 20
+      },
+      "urlComponents": {
+        "protocol": "https:",
+        "domain": "microsoft-support.ml",
+        "path": "/urgent-security-update",
+        "hasPort": false,
+        "httpsUsed": true
+      },
+      "features": {
+        "length": 51,
+        "subdomainCount": 0,
+        "pathDepth": 1,
+        "specialCharCount": 3,
+        "suspiciousKeywords": [
+          "Brand impersonation: \"microsoft\"",
+          "High-risk TLD: ml"
+        ],
+        "maliciousPatterns": [
+          "Brand impersonation: \"microsoft\""
+        ],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": true,
+        "hasPhishingIndicators": true,
+        "riskFactors": [
+          "Brand impersonation: \"microsoft\"",
+          "High-risk TLD: ml"
+        ]
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": true,
+          "status": "valid",
+          "recommendation": "SSL certificate present"
+        },
+        "reputation": {
+          "score": "bad",
+          "confidence": "high",
+          "description": "Domain appears to impersonate a legitimate service"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML v3.1",
+        "rawScore": 25,
+        "confidence": {
+          "level": "Low",
+          "value": 20
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 0,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 100,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "✅ Random Forest classified this URL as SAFE (score: 25/100). No major threats detected.",
+        "riskFactors": [
+          {
+            "title": "Brand impersonation: \"microsoft\"",
+            "description": "Severity: critical — detected by Random Forest ensemble",
+            "severity": "critical"
+          },
+          {
+            "title": "High-risk TLD: ml",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          }
+        ],
+        "explanations": [
+          "Severity: critical — detected by Random Forest ensemble",
+          "Severity: high — detected by Random Forest ensemble"
+        ],
+        "recommendation": "URL appears safe. Always verify the domain before sharing sensitive information.",
+        "detailedBreakdown": [
+          {
+            "title": "Brand impersonation: \"microsoft\"",
+            "description": "Severity: critical — detected by Random Forest ensemble",
+            "severity": "critical"
+          },
+          {
+            "title": "High-risk TLD: ml",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          }
+        ]
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T07:48:55.847Z",
+        "processingTime": 2,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773733805427,
+    "timestamp": "2026-03-17T07:50:05.427Z",
+    "url": "https://poki.com/?msockid=125377bd9d85636f09a4615a9c7d62f9",
+    "threatScore": 0,
+    "classification": "Safe",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "https://poki.com/?msockid=125377bd9d85636f09a4615a9c7d62f9",
+      "normalizedUrl": "https://poki.com/?msockid=125377bd9d85636f09a4615a9c7d62f9",
+      "classification": "Safe",
+      "threatScore": 0,
+      "confidence": {
+        "level": "High",
+        "value": 100
+      },
+      "urlComponents": {
+        "protocol": "https:",
+        "domain": "poki.com",
+        "path": "/",
+        "hasPort": false,
+        "httpsUsed": true
+      },
+      "features": {
+        "length": 58,
+        "subdomainCount": 0,
+        "pathDepth": 0,
+        "specialCharCount": 2,
+        "suspiciousKeywords": [],
+        "maliciousPatterns": [],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": false,
+        "riskFactors": []
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": true,
+          "status": "valid",
+          "recommendation": "SSL certificate present"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown — exercise caution"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML v3.1",
+        "rawScore": 0,
+        "confidence": {
+          "level": "High",
+          "value": 100
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 0,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 0,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "✅ Random Forest classified this URL as SAFE (score: 0/100). No major threats detected.",
+        "riskFactors": [],
+        "explanations": [],
+        "recommendation": "URL appears safe. Always verify the domain before sharing sensitive information.",
+        "detailedBreakdown": []
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T07:50:05.427Z",
+        "processingTime": 1,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773733989638,
+    "timestamp": "2026-03-17T07:53:09.638Z",
+    "url": "http://poki.zyx/?msockid=125377bd9d85636f09a4615a9c7d62f9",
+    "threatScore": 8,
+    "classification": "Safe",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://poki.zyx/?msockid=125377bd9d85636f09a4615a9c7d62f9",
+      "normalizedUrl": "http://poki.zyx/?msockid=125377bd9d85636f09a4615a9c7d62f9",
+      "classification": "Safe",
+      "threatScore": 8,
+      "confidence": {
+        "level": "High",
+        "value": 80
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "poki.zyx",
+        "path": "/",
+        "hasPort": false,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 57,
+        "subdomainCount": 0,
+        "pathDepth": 0,
+        "specialCharCount": 2,
+        "suspiciousKeywords": [
+          "No HTTPS encryption"
+        ],
+        "maliciousPatterns": [],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": false,
+        "riskFactors": [
+          "No HTTPS encryption"
+        ]
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate — avoid entering sensitive data"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown — exercise caution"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML v3.1",
+        "rawScore": 8,
+        "confidence": {
+          "level": "High",
+          "value": 80
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 25,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 0,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "✅ Random Forest classified this URL as SAFE (score: 8/100). No major threats detected.",
+        "riskFactors": [
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ],
+        "explanations": [
+          "Severity: medium — detected by Random Forest ensemble"
+        ],
+        "recommendation": "URL appears safe. Always verify the domain before sharing sensitive information.",
+        "detailedBreakdown": [
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ]
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T07:53:09.636Z",
+        "processingTime": 3,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773733999684,
+    "timestamp": "2026-03-17T07:53:19.684Z",
+    "url": "http://poki.xyz?msockid=125377bd9d85636f09a4615a9c7d62f9",
+    "threatScore": 18,
+    "classification": "Safe",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://poki.xyz?msockid=125377bd9d85636f09a4615a9c7d62f9",
+      "normalizedUrl": "http://poki.xyz/?msockid=125377bd9d85636f09a4615a9c7d62f9",
+      "classification": "Safe",
+      "threatScore": 18,
+      "confidence": {
+        "level": "Medium",
+        "value": 67
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "poki.xyz",
+        "path": "/",
+        "hasPort": false,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 57,
+        "subdomainCount": 0,
+        "pathDepth": 0,
+        "specialCharCount": 2,
+        "suspiciousKeywords": [
+          "High-risk TLD: xyz",
+          "No HTTPS encryption"
+        ],
+        "maliciousPatterns": [],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": false,
+        "riskFactors": [
+          "High-risk TLD: xyz",
+          "No HTTPS encryption"
+        ]
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate — avoid entering sensitive data"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown — exercise caution"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML v3.1",
+        "rawScore": 18,
+        "confidence": {
+          "level": "Medium",
+          "value": 67
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 25,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 40,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "✅ Random Forest classified this URL as SAFE (score: 18/100). No major threats detected.",
+        "riskFactors": [
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ],
+        "explanations": [
+          "Severity: high — detected by Random Forest ensemble",
+          "Severity: medium — detected by Random Forest ensemble"
+        ],
+        "recommendation": "URL appears safe. Always verify the domain before sharing sensitive information.",
+        "detailedBreakdown": [
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ]
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T07:53:19.683Z",
+        "processingTime": 0,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773734035114,
+    "timestamp": "2026-03-17T07:53:55.114Z",
+    "url": "http://poki.xyz?msockid=125377bd9d85636f09a4615a9c7d62f9",
+    "threatScore": 18,
+    "classification": "Safe",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://poki.xyz?msockid=125377bd9d85636f09a4615a9c7d62f9",
+      "normalizedUrl": "http://poki.xyz/?msockid=125377bd9d85636f09a4615a9c7d62f9",
+      "classification": "Safe",
+      "threatScore": 18,
+      "confidence": {
+        "level": "Medium",
+        "value": 67
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "poki.xyz",
+        "path": "/",
+        "hasPort": false,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 57,
+        "subdomainCount": 0,
+        "pathDepth": 0,
+        "specialCharCount": 2,
+        "suspiciousKeywords": [
+          "High-risk TLD: xyz",
+          "No HTTPS encryption"
+        ],
+        "maliciousPatterns": [],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": false,
+        "riskFactors": [
+          "High-risk TLD: xyz",
+          "No HTTPS encryption"
+        ]
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate — avoid entering sensitive data"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown — exercise caution"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML v3.1",
+        "rawScore": 18,
+        "confidence": {
+          "level": "Medium",
+          "value": 67
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 25,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 40,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "✅ Random Forest classified this URL as SAFE (score: 18/100). No major threats detected.",
+        "riskFactors": [
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ],
+        "explanations": [
+          "Severity: high — detected by Random Forest ensemble",
+          "Severity: medium — detected by Random Forest ensemble"
+        ],
+        "recommendation": "URL appears safe. Always verify the domain before sharing sensitive information.",
+        "detailedBreakdown": [
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ]
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T07:53:55.112Z",
+        "processingTime": 0,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773734177876,
+    "timestamp": "2026-03-17T07:56:17.876Z",
+    "url": "https://www.damnvulnerabledefi.xyz/",
+    "threatScore": 10,
+    "classification": "Safe",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "https://www.damnvulnerabledefi.xyz/",
+      "normalizedUrl": "https://www.damnvulnerabledefi.xyz/",
+      "classification": "Safe",
+      "threatScore": 10,
+      "confidence": {
+        "level": "Medium",
+        "value": 68
+      },
+      "urlComponents": {
+        "protocol": "https:",
+        "domain": "www.damnvulnerabledefi.xyz",
+        "path": "/",
+        "hasPort": false,
+        "httpsUsed": true
+      },
+      "features": {
+        "length": 35,
+        "subdomainCount": 1,
+        "pathDepth": 0,
+        "specialCharCount": 0,
+        "suspiciousKeywords": [
+          "High-risk TLD: xyz"
+        ],
+        "maliciousPatterns": [],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": false,
+        "riskFactors": [
+          "High-risk TLD: xyz"
+        ]
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": true,
+          "status": "valid",
+          "recommendation": "SSL certificate present"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown — exercise caution"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML v3.1",
+        "rawScore": 10,
+        "confidence": {
+          "level": "Medium",
+          "value": 68
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 0,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 40,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "✅ Random Forest classified this URL as SAFE (score: 10/100). No major threats detected.",
+        "riskFactors": [
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          }
+        ],
+        "explanations": [
+          "Severity: high — detected by Random Forest ensemble"
+        ],
+        "recommendation": "URL appears safe. Always verify the domain before sharing sensitive information.",
+        "detailedBreakdown": [
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          }
+        ]
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T07:56:17.874Z",
+        "processingTime": 0,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773734217285,
+    "timestamp": "2026-03-17T07:56:57.285Z",
+    "url": "https://xecureone.com/",
+    "threatScore": 0,
+    "classification": "Safe",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "https://xecureone.com/",
+      "normalizedUrl": "https://xecureone.com/",
+      "classification": "Safe",
+      "threatScore": 0,
+      "confidence": {
+        "level": "High",
+        "value": 100
+      },
+      "urlComponents": {
+        "protocol": "https:",
+        "domain": "xecureone.com",
+        "path": "/",
+        "hasPort": false,
+        "httpsUsed": true
+      },
+      "features": {
+        "length": 22,
+        "subdomainCount": 0,
+        "pathDepth": 0,
+        "specialCharCount": 0,
+        "suspiciousKeywords": [],
+        "maliciousPatterns": [],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": false,
+        "riskFactors": []
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": true,
+          "status": "valid",
+          "recommendation": "SSL certificate present"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown — exercise caution"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML v3.1",
+        "rawScore": 0,
+        "confidence": {
+          "level": "High",
+          "value": 100
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 0,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 0,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "✅ Random Forest classified this URL as SAFE (score: 0/100). No major threats detected.",
+        "riskFactors": [],
+        "explanations": [],
+        "recommendation": "URL appears safe. Always verify the domain before sharing sensitive information.",
+        "detailedBreakdown": []
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T07:56:57.283Z",
+        "processingTime": 0,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773734255550,
+    "timestamp": "2026-03-17T07:57:35.550Z",
+    "url": "https://glyss.in/",
+    "threatScore": 0,
+    "classification": "Safe",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "https://glyss.in/",
+      "normalizedUrl": "https://glyss.in/",
+      "classification": "Safe",
+      "threatScore": 0,
+      "confidence": {
+        "level": "High",
+        "value": 100
+      },
+      "urlComponents": {
+        "protocol": "https:",
+        "domain": "glyss.in",
+        "path": "/",
+        "hasPort": false,
+        "httpsUsed": true
+      },
+      "features": {
+        "length": 17,
+        "subdomainCount": 0,
+        "pathDepth": 0,
+        "specialCharCount": 0,
+        "suspiciousKeywords": [],
+        "maliciousPatterns": [],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": false,
+        "riskFactors": []
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": true,
+          "status": "valid",
+          "recommendation": "SSL certificate present"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown — exercise caution"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML v3.1",
+        "rawScore": 0,
+        "confidence": {
+          "level": "High",
+          "value": 100
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 0,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 0,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "✅ Random Forest classified this URL as SAFE (score: 0/100). No major threats detected.",
+        "riskFactors": [],
+        "explanations": [],
+        "recommendation": "URL appears safe. Always verify the domain before sharing sensitive information.",
+        "detailedBreakdown": []
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T07:57:35.549Z",
+        "processingTime": 0,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773734282211,
+    "timestamp": "2026-03-17T07:58:02.211Z",
+    "url": "https://www.damnvulnerabledefi.xyz/",
+    "threatScore": 10,
+    "classification": "Safe",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "https://www.damnvulnerabledefi.xyz/",
+      "normalizedUrl": "https://www.damnvulnerabledefi.xyz/",
+      "classification": "Safe",
+      "threatScore": 10,
+      "confidence": {
+        "level": "Medium",
+        "value": 68
+      },
+      "urlComponents": {
+        "protocol": "https:",
+        "domain": "www.damnvulnerabledefi.xyz",
+        "path": "/",
+        "hasPort": false,
+        "httpsUsed": true
+      },
+      "features": {
+        "length": 35,
+        "subdomainCount": 1,
+        "pathDepth": 0,
+        "specialCharCount": 0,
+        "suspiciousKeywords": [
+          "High-risk TLD: xyz"
+        ],
+        "maliciousPatterns": [],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": false,
+        "riskFactors": [
+          "High-risk TLD: xyz"
+        ]
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": true,
+          "status": "valid",
+          "recommendation": "SSL certificate present"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown — exercise caution"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML v3.1",
+        "rawScore": 10,
+        "confidence": {
+          "level": "Medium",
+          "value": 68
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 0,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 40,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "✅ Random Forest classified this URL as SAFE (score: 10/100). No major threats detected.",
+        "riskFactors": [
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          }
+        ],
+        "explanations": [
+          "Severity: high — detected by Random Forest ensemble"
+        ],
+        "recommendation": "URL appears safe. Always verify the domain before sharing sensitive information.",
+        "detailedBreakdown": [
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          }
+        ]
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T07:58:02.210Z",
+        "processingTime": 0,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773734452385,
+    "timestamp": "2026-03-17T08:00:52.385Z",
+    "url": "https://www.damnvulnerabledefi.xyz/",
+    "threatScore": 10,
+    "classification": "Safe",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "https://www.damnvulnerabledefi.xyz/",
+      "normalizedUrl": "https://www.damnvulnerabledefi.xyz/",
+      "classification": "Safe",
+      "threatScore": 10,
+      "confidence": {
+        "level": "Medium",
+        "value": 68
+      },
+      "urlComponents": {
+        "protocol": "https:",
+        "domain": "www.damnvulnerabledefi.xyz",
+        "path": "/",
+        "hasPort": false,
+        "httpsUsed": true
+      },
+      "features": {
+        "length": 35,
+        "subdomainCount": 1,
+        "pathDepth": 0,
+        "specialCharCount": 0,
+        "suspiciousKeywords": [
+          "High-risk TLD: xyz"
+        ],
+        "maliciousPatterns": [],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": false,
+        "riskFactors": [
+          "High-risk TLD: xyz"
+        ]
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": true,
+          "status": "valid",
+          "recommendation": "SSL certificate present"
+        },
+        "reputation": {
+          "score": "unknown",
+          "confidence": "medium",
+          "description": "Domain reputation unknown — exercise caution"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML v3.1",
+        "rawScore": 10,
+        "confidence": {
+          "level": "Medium",
+          "value": 68
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 0,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 40,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "✅ Random Forest classified this URL as SAFE (score: 10/100). No major threats detected.",
+        "riskFactors": [
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          }
+        ],
+        "explanations": [
+          "Severity: high — detected by Random Forest ensemble"
+        ],
+        "recommendation": "URL appears safe. Always verify the domain before sharing sensitive information.",
+        "detailedBreakdown": [
+          {
+            "title": "High-risk TLD: xyz",
+            "description": "Severity: high — detected by Random Forest ensemble",
+            "severity": "high"
+          }
+        ]
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-17T08:00:52.384Z",
+        "processingTime": 0,
+        "version": "3.0.0-ML"
+      }
+    }
+  },
+  {
+    "id": 1773918781280,
+    "timestamp": "2026-03-19T11:13:01.280Z",
+    "url": "http://paypal-security.com/verify-account-login-update-secure",
+    "threatScore": 33,
+    "classification": "Suspicious",
+    "isMalicious": false,
+    "analysis": {
+      "originalUrl": "http://paypal-security.com/verify-account-login-update-secure",
+      "normalizedUrl": "http://paypal-security.com/verify-account-login-update-secure",
+      "classification": "Suspicious",
+      "threatScore": 33,
+      "confidence": {
+        "level": "Low",
+        "value": 23
+      },
+      "urlComponents": {
+        "protocol": "http:",
+        "domain": "paypal-security.com",
+        "path": "/verify-account-login-update-secure",
+        "hasPort": false,
+        "httpsUsed": false
+      },
+      "features": {
+        "length": 61,
+        "subdomainCount": 0,
+        "pathDepth": 1,
+        "specialCharCount": 5,
+        "suspiciousKeywords": [
+          "Brand impersonation: \"paypal\"",
+          "No HTTPS encryption"
+        ],
+        "maliciousPatterns": [
+          "Brand impersonation: \"paypal\""
+        ],
+        "hasIP": false,
+        "isShortener": false,
+        "hasSuspiciousTLD": false,
+        "hasPhishingIndicators": true,
+        "riskFactors": [
+          "Brand impersonation: \"paypal\"",
+          "No HTTPS encryption"
+        ]
+      },
+      "securityChecks": {
+        "sslCertificate": {
+          "hasSSL": false,
+          "status": "missing",
+          "recommendation": "No SSL certificate — avoid entering sensitive data"
+        },
+        "reputation": {
+          "score": "bad",
+          "confidence": "high",
+          "description": "Domain appears to impersonate a legitimate service"
+        },
+        "redirectChain": {
+          "hasSuspiciousRedirect": false,
+          "riskLevel": "low",
+          "description": "No suspicious redirect patterns detected"
+        }
+      },
+      "mlEngine": {
+        "name": "Random Forest ML v3.1",
+        "rawScore": 33,
+        "confidence": {
+          "level": "Low",
+          "value": 23
+        },
+        "treeVotes": [
+          {
+            "tree": 1,
+            "vote": 25,
+            "weight": 0.3
+          },
+          {
+            "tree": 2,
+            "vote": 0,
+            "weight": 0.2
+          },
+          {
+            "tree": 3,
+            "vote": 100,
+            "weight": 0.25
+          },
+          {
+            "tree": 4,
+            "vote": 0,
+            "weight": 0.15
+          },
+          {
+            "tree": 5,
+            "vote": 0,
+            "weight": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "⚠️ Random Forest flagged this URL as SUSPICIOUS (score: 33/100). Proceed with caution.",
+        "riskFactors": [
+          {
+            "title": "Brand impersonation: \"paypal\"",
+            "description": "Severity: critical — detected by Random Forest ensemble",
+            "severity": "critical"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ],
+        "explanations": [
+          "Severity: critical — detected by Random Forest ensemble",
+          "Severity: medium — detected by Random Forest ensemble"
+        ],
+        "recommendation": "Approach with caution. Verify the website before entering any personal data.",
+        "detailedBreakdown": [
+          {
+            "title": "Brand impersonation: \"paypal\"",
+            "description": "Severity: critical — detected by Random Forest ensemble",
+            "severity": "critical"
+          },
+          {
+            "title": "No HTTPS encryption",
+            "description": "Severity: medium — detected by Random Forest ensemble",
+            "severity": "medium"
+          }
+        ]
+      },
+      "metadata": {
+        "analysisTimestamp": "2026-03-19T11:13:01.276Z",
+        "processingTime": 6,
+        "version": "3.0.0-ML"
+      }
+    }
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "malicious_keywords": [
+    "login", "verify", "update", "secure", "bank", "paypal", "amazon",
+    "microsoft", "google", "facebook", "apple", "netflix", "account",
+    "security", "suspended", "confirm", "click", "urgent", "immediate",
+    "billing", "payment", "credit", "card", "password", "signin", "auth"
+  ],
+  "suspicious_tlds": [
+    ".tk", ".ml", ".ga", ".cf", ".pw", ".top", ".click", ".download",
+    ".stream", ".science", ".racing", ".review", ".faith", ".accountant",
+    ".loan", ".win", ".bid", ".trade", ".date", ".party", ".cricket"
+  ],
+  "url_shorteners": [
+    "bit.ly", "tinyurl.com", "t.co", "goo.gl", "ow.ly", "short.link",
+    "tiny.cc", "is.gd", "buff.ly", "rebrand.ly", "cutt.ly", "shorturl.at"
+  ],
+  "suspicious_patterns": {
+    "ip_address_regex": "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$",
+    "suspicious_chars": ["@", "-", "_", "~", "%", "=", "&", "?"],
+    "max_safe_length": 75,
+    "max_safe_subdomains": 3,
+    "suspicious_ports": ["8080", "8000", "3000", "4000", "5000"]
+  },
+  "phishing_indicators": [
+    "secure-", "verify-", "update-", "login-", "account-", "bank-",
+    "paypal-", "amazon-", "microsoft-", "google-", "facebook-", "apple-"
+  ],
+  "legitimate_url_patterns": [
+    "https://www.", "https://", "http://www.", "official domain"
+  ]
+}

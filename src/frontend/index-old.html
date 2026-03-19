@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Based Phishing Detection System | Cybersecurity Dashboard</title>
+    <meta name="description" content="Advanced AI-powered phishing email and malicious URL detection system with explainable alerts">
+    <meta name="keywords" content="cybersecurity, phishing detection, AI, machine learning, URL analysis, email security">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+</head>
+<body>
+    <!-- Desktop Login Layout -->
+    <div id="login-modal" class="login-modal">
+        <div class="login-wrapper">
+            <!-- Left Side - Branding -->
+            <div class="login-left">
+                <div class="login-brand">
+                    <div class="brand-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h1>Phishing Detection</h1>
+                    <p>Advanced AI-Powered Security</p>
+                </div>
+                <div class="login-features">
+                    <div class="feature-item">
+                        <i class="fas fa-magic"></i>
+                        <h3>AI Detection</h3>
+                        <p>Machine learning powered threat detection</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Real-time Analysis</h3>
+                        <p>Instant email and URL risk assessment</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Explainable AI</h3>
+                        <p>Understand why content is flagged</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Login Form -->
+            <div class="login-right">
+                <div class="login-container">
+                    <div class="login-header">
+                        <h2 id="modal-subtitle">Welcome Back</h2>
+                        <p>Sign in to your account</p>
+                    </div>
+
+                    <!-- Login Form -->
+                    <form id="login-form" class="login-form" style="display: block;">
+                        <div class="form-group">
+                            <label for="username">
+                                <i class="fas fa-user"></i> Username
+                            </label>
+                            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">
+                                <i class="fas fa-lock"></i> Password
+                            </label>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        </div>
+
+                        <div class="form-options">
+                            <div class="remember-me">
+                                <input type="checkbox" id="remember" name="remember">
+                                <label for="remember">Remember me</label>
+                            </div>
+                            <a href="#" class="forgot-pass">Forgot password?</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-login">
+                            <i class="fas fa-sign-in-alt"></i> Sign In
+                        </button>
+                    </form>
+
+                    <!-- Signup Form -->
+                    <form id="signup-form" class="login-form" style="display: none;">
+                        <div class="form-group">
+                            <label for="signup-username">
+                                <i class="fas fa-user"></i> Username
+                            </label>
+                            <input type="text" id="signup-username" name="username" placeholder="Choose a username" required minlength="4">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signup-password">
+                                <i class="fas fa-lock"></i> Password
+                            </label>
+                            <input type="password" id="signup-password" name="password" placeholder="Create a password (min 6 chars)" required minlength="6">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signup-confirm">
+                                <i class="fas fa-lock"></i> Confirm Password
+                            </label>
+                            <input type="password" id="signup-confirm" name="confirm" placeholder="Confirm your password" required minlength="6">
+                        </div>
+
+                        <button type="submit" class="btn btn-login">
+                            <i class="fas fa-user-plus"></i> Create Account
+                        </button>
+                    </form>
+
+                    <div id="login-error" class="login-error" style="display: none;"></div>
+
+                    <!-- Form Toggle -->
+                    <div class="form-divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="form-toggle">
+                        <span id="login-toggle-text">
+                            Don't have an account? 
+                            <a href="#" onclick="toggleAuthForm('signup'); return false;">Sign Up</a>
+                        </span>
+                        <span id="signup-toggle-text" style="display: none;">
+                            Already have an account? 
+                            <a href="#" onclick="toggleAuthForm('login'); return false;">Sign In</a>
+                        </span>
+                    </div>
+
+                    <!-- Demo Credentials -->
+                    <div class="demo-box">
+                        <div class="demo-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="demo-content">
+                            <strong>Try Demo:</strong>
+                            <p><code>admin</code> / <code>password123</code></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard (hidden until logged in) -->
+    <div id="dashboard" class="dashboard-container" style="display: none;">
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <i class="fas fa-shield-alt logo-icon"></i>
+                    <div class="logo-text">
+                        <h1>AI Phishing Detection System</h1>
+                        <p class="tagline">Advanced Cybersecurity Protection with Explainable AI</p>
+                    </div>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-item connection-status" id="connection-status" title="Backend Connection Status">
+                        <i class="fas fa-circle" id="connection-icon"></i>
+                        <span id="connection-text">Checking...</span>
+                        <small>Backend</small>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span id="total-analyses">0</span>
+                        <small>Total Analyses</small>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span id="threats-detected">0</span>
+                        <small>Threats Detected</small>
+                    </div>
+                    <div class="stat-item user-info">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="current-user">User</span>
+                        <button onclick="logout()" class="btn-logout" title="Logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Navigation Tabs -->
+            <nav class="tab-navigation">
+                <button class="tab-button active" data-tab="email" onclick="switchTab('email')">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email Analysis</span>
+                </button>
+                <button class="tab-button" data-tab="url" onclick="switchTab('url')">
+                    <i class="fas fa-link"></i>
+                    <span>URL Analysis</span>
+                </button>
+                <button class="tab-button" data-tab="data" onclick="switchTab('data')">
+                    <i class="fas fa-download"></i>
+                    <span>Data & Download</span>
+                </button>
+            </nav>
+
+            <!-- Email Analysis Tab -->
+            <section id="email-tab" class="tab-content active">
+                <div class="analysis-panel">
+                    <div class="panel-header">
+                        <h2><i class="fas fa-envelope-open-text"></i> Email Phishing Analysis</h2>
+                        <p>Analyze email content for phishing indicators using advanced AI detection</p>
+                    </div>
+                    
+                    <div class="input-section">
+                        <div class="input-group">
+                            <label for="email-input">Email Content</label>
+                            <textarea 
+                                id="email-input" 
+                                placeholder="Paste your email content here for comprehensive phishing analysis..."
+                                rows="12"
+                                maxlength="50000"
+                            ></textarea>
+                            <div class="input-info">
+                                <span id="email-char-count">0</span> / 50,000 characters
+                            </div>
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button onclick="analyzeEmail()" class="btn btn-primary">
+                                <i class="fas fa-search"></i>
+                                Analyze Email
+                            </button>
+                            <button onclick="loadSampleEmail()" class="btn btn-secondary">
+                                <i class="fas fa-file-alt"></i>
+                                Load Sample
+                            </button>
+                            <button onclick="clearEmailInput()" class="btn btn-outline">
+                                <i class="fas fa-trash"></i>
+                                Clear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- URL Analysis Tab -->
+            <section id="url-tab" class="tab-content">
+                <div class="analysis-panel">
+                    <div class="panel-header">
+                        <h2><i class="fas fa-link"></i> Malicious URL Detection</h2>
+                        <p>Analyze URLs for malicious indicators and security threats</p>
+                    </div>
+                    
+                    <div class="input-section">
+                        <div class="input-group">
+                            <label for="url-input">URL to Analyze</label>
+                            <input 
+                                type="url" 
+                                id="url-input" 
+                                placeholder="Enter URL to analyze (e.g., https://example.com)"
+                                maxlength="2000"
+                            >
+                            <div class="input-info">
+                                <span id="url-char-count">0</span> / 2,000 characters
+                            </div>
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button onclick="analyzeURL()" class="btn btn-primary">
+                                <i class="fas fa-search"></i>
+                                Analyze URL
+                            </button>
+                            <button onclick="loadSampleURL()" class="btn btn-secondary">
+                                <i class="fas fa-link"></i>
+                                Load Sample
+                            </button>
+                            <button onclick="clearUrlInput()" class="btn btn-outline">
+                                <i class="fas fa-trash"></i>
+                                Clear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Data & Download Tab -->
+            <section id="data-tab" class="tab-content">
+                <div class="analysis-panel">
+                    <div class="panel-header">
+                        <h2><i class="fas fa-database"></i> Data Management & Downloads</h2>
+                        <p>View and download all analysis data from the backend</p>
+                    </div>
+                    
+                    <div class="download-section">
+                        <div class="download-grid">
+                            <!-- Email Data -->
+                            <div class="download-card">
+                                <div class="card-header">
+                                    <i class="fas fa-envelope"></i>
+                                    <h3>Email Analyses</h3>
+                                </div>
+                                <p class="card-description">Download all analyzed email data</p>
+                                <div class="card-buttons">
+                                    <button onclick="viewEmails()" class="btn btn-secondary">
+                                        <i class="fas fa-eye"></i>
+                                        View Data
+                                    </button>
+                                    <button onclick="downloadEmails('json')" class="btn btn-primary">
+                                        <i class="fas fa-file-json"></i>
+                                        JSON
+                                    </button>
+                                    <button onclick="downloadEmails('csv')" class="btn btn-primary">
+                                        <i class="fas fa-table"></i>
+                                        CSV
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- URL Data -->
+                            <div class="download-card">
+                                <div class="card-header">
+                                    <i class="fas fa-link"></i>
+                                    <h3>URL Analyses</h3>
+                                </div>
+                                <p class="card-description">Download all analyzed URL data</p>
+                                <div class="card-buttons">
+                                    <button onclick="viewURLs()" class="btn btn-secondary">
+                                        <i class="fas fa-eye"></i>
+                                        View Data
+                                    </button>
+                                    <button onclick="downloadURLs('json')" class="btn btn-primary">
+                                        <i class="fas fa-file-json"></i>
+                                        JSON
+                                    </button>
+                                    <button onclick="downloadURLs('csv')" class="btn btn-primary">
+                                        <i class="fas fa-table"></i>
+                                        CSV
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Download Information</h3>
+                        <ul class="info-list">
+                            <li><strong>JSON Format:</strong> Complete analysis data with all details in JSON structure</li>
+                            <li><strong>CSV Format:</strong> Spreadsheet-compatible format with key metrics</li>
+                            <li><strong>Auto-timestamp:</strong> Files are automatically timestamped with download date</li>
+                            <li><strong>Data Location:</strong> All data is stored securely on the backend</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="results-section" class="results-section" style="display: none;">
+                <div class="results-header">
+                    <h2 id="results-title">Analysis Results</h2>
+                    <div class="results-meta">
+                        <div id="classification-badge" class="classification-badge"></div>
+                        <div class="processing-time">
+                            <i class="fas fa-clock"></i>
+                            <span id="processing-time">0ms</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Threat Score Visualization -->
+                <div class="threat-score-section">
+                    <div class="threat-chart-container">
+                        <canvas id="threat-chart" width="200" height="200"></canvas>
+                        <div class="threat-score-overlay">
+                            <div id="threat-score-value" class="threat-score-value">0</div>
+                            <div class="threat-score-label">Threat Score</div>
+                        </div>
+                    </div>
+                    
+                    <div class="threat-details">
+                        <div class="threat-level">
+                            <span class="label">Threat Level:</span>
+                            <span id="threat-level" class="value">Low</span>
+                        </div>
+                        <div class="confidence-level">
+                            <span class="label">Confidence:</span>
+                            <span id="confidence-level" class="value">High</span>
+                        </div>
+                        <div class="analysis-summary">
+                            <span class="label">Summary:</span>
+                            <span id="analysis-summary" class="value">Content appears safe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Risk Factors -->
+                <div class="risk-factors-section">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Risk Factors</h3>
+                    <div id="risk-factors-container" class="risk-factors-container">
+                        <!-- Risk factors will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Detailed Explanations -->
+                <div class="explanations-section">
+                    <h3><i class="fas fa-microscope"></i> Detailed Analysis</h3>
+                    <div id="explanations-container" class="explanations-container">
+                        <!-- Explanations will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Recommendations -->
+                <div class="recommendations-section">
+                    <h3><i class="fas fa-lightbulb"></i> Security Recommendations</h3>
+                    <div id="recommendations-container" class="recommendations-container">
+                        <!-- Recommendations will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Highlighted Content (for emails) -->
+                <div id="highlighted-content-section" class="highlighted-content-section" style="display: none;">
+                    <h3><i class="fas fa-highlighter"></i> Highlighted Suspicious Content</h3>
+                    <div id="highlighted-content" class="highlighted-content">
+                        <!-- Highlighted content will be populated here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loading Indicator -->
+            <div id="loading-indicator" class="loading-indicator" style="display: none;">
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                    <div class="loading-text">
+                        <h3>Analyzing Content...</h3>
+                        <p>AI is processing your request</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2024 AI-Based Phishing Detection System</p>
+                    <p>Advanced Cybersecurity Capstone Project</p>
+                </div>
+                <div class="footer-links">
+                    <a href="http://localhost:8081/api/docs" target="_blank">
+                        <i class="fas fa-book"></i> API Documentation
+                    </a>
+                    <a href="http://localhost:8081/api/health" target="_blank">
+                        <i class="fas fa-heartbeat"></i> System Health
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div><!-- Close dashboard container -->
+
+    <!-- Data Viewer Modal -->
+    <div id="data-viewer-modal" class="data-viewer-modal" style="display: none;">
+        <div class="data-viewer-content">
+            <div class="data-viewer-header">
+                <h2 id="data-viewer-title">Data Viewer</h2>
+                <button class="close-btn" onclick="closeDataViewer()" title="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="data-viewer-controls">
+                <input type="text" id="search-input" placeholder="Search by subject/URL..." class="search-box">
+                <select id="filter-threat" class="filter-select">
+                    <option value="">All Threat Levels</option>
+                    <option value="Phishing">Phishing</option>
+                    <option value="Suspicious">Suspicious</option>
+                    <option value="Safe">Safe</option>
+                    <option value="Malicious">Malicious</option>
+                </select>
+            </div>
+
+            <div id="data-viewer-list" class="data-viewer-list">
+                <!-- Data items will be inserted here -->
+            </div>
+
+            <div class="data-viewer-footer">
+                <p id="data-count">0 records found</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- JavaScript - Load Chart.js with fallback -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- Fallback Chart.js from alternative CDN if primary fails -->
+    <script>
+        window.addEventListener('load', function() {
+            if (typeof Chart === 'undefined') {
+                console.warn('Chart.js not loaded from primary CDN - attempting fallback');
+                var script = document.createElement('script');
+                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js';
+                script.onload = function() {
+                    console.log('Chart.js loaded from fallback CDN');
+                };
+                script.onerror = function() {
+                    console.warn('Chart.js unavailable - using text-based visualization');\n                    window.ChartUnavailable = true;
+                };
+                document.head.appendChild(script);
+            }
+        });
+    </script>
+</body>
+</html>

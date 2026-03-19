@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Data Viewer - Phishing Detection</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 32px;
+        }
+
+        .header p {
+            color: #6c757d;
+            font-size: 16px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-card h3 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .stat-card p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .controls button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: #e8f0fe;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .data-container {
+            display: grid;
+            gap: 20px;
+        }
+
+        .email-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .email-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .email-header {
+            padding: 20px;
+            border-bottom: 2px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+
+        .email-info h2 {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .email-meta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .threat-badge {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .threat-safe {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .threat-suspicious {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .threat-phishing {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .threat-score {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 20px;
+        }
+
+        .score-low {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        }
+
+        .score-medium {
+            background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+        }
+
+        .score-high {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+        }
+
+        .email-body {
+            padding: 20px;
+        }
+
+        .content-preview {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .content-preview p {
+            color: #495057;
+            line-height: 1.6;
+            font-size: 14px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .feature-box {
+            background: #f0f4f8;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+        }
+
+        .feature-box h4 {
+            color: #667eea;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .feature-box p {
+            color: #2c3e50;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .risk-factors {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 4px solid #ffc107;
+        }
+
+        .risk-factors h4 {
+            color: #856404;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .risk-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .risk-list li {
+            padding: 8px 0;
+            color: #856404;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .risk-list li:before {
+            content: "⚠️";
+        }
+
+        .empty-state {
+            background: white;
+            padding: 60px 20px;
+            border-radius: 12px;
+            text-align: center;
+            color: #6c757d;
+        }
+
+        .empty-state i {
+            font-size: 48px;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .email-header {
+                flex-direction: column;
+            }
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: white;
+            font-size: 18px;
+        }
+
+        .loading i {
+            font-size: 48px;
+            margin-bottom: 15px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                <i class="fas fa-database"></i>
+                Backend Data Viewer
+            </h1>
+            <p>View all email and URL analyses stored in the backend</p>
+            <div class="stats" id="stats">
+                <div class="stat-card">
+                    <h3 id="total-count">0</h3>
+                    <p>Total Analyses</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="suspicious-count">0</h3>
+                    <p>Suspicious</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="safe-count">0</h3>
+                    <p>Safe</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn-primary" onclick="loadEmailData()">
+                <i class="fas fa-envelope"></i> Load Emails
+            </button>
+            <button class="btn-primary" onclick="loadURLData()">
+                <i class="fas fa-link"></i> Load URLs
+            </button>
+            <button class="btn-secondary" onclick="refreshData()">
+                <i class="fas fa-sync"></i> Refresh
+            </button>
+        </div>
+
+        <div id="data-container" class="data-container">
+            <div class="empty-state">
+                <i class="fas fa-folder-open"></i>
+                <h3>No data loaded yet</h3>
+                <p>Click "Load Emails" or "Load URLs" to view backend data</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:8081';
+        let currentData = [];
+        let currentType = 'emails';
+
+        async function loadEmailData() {
+            currentType = 'emails';
+            try {
+                document.getElementById('data-container').innerHTML = '<div class="loading"><i class="fas fa-spinner"></i><p>Loading email data...</p></div>';
+                
+                const response = await fetch(`${API_BASE_URL}/api/download/emails/json`);
+                const result = await response.json();
+                
+                if (result.success) {
+                    currentData = result.data;
+                    displayData(result.data, 'emails');
+                    updateStats(result.data);
+                } else {
+                    showError('Failed to load email data');
+                }
+            } catch (error) {
+                console.error('Error loading emails:', error);
+                showError('Error loading email data: ' + error.message);
+            }
+        }
+
+        async function loadURLData() {
+            currentType = 'urls';
+            try {
+                document.getElementById('data-container').innerHTML = '<div class="loading"><i class="fas fa-spinner"></i><p>Loading URL data...</p></div>';
+                
+                const response = await fetch(`${API_BASE_URL}/api/download/urls/json`);
+                const result = await response.json();
+                
+                if (result.success) {
+                    currentData = result.data;
+                    displayData(result.data, 'urls');
+                    updateStats(result.data);
+                } else {
+                    showError('Failed to load URL data');
+                }
+            } catch (error) {
+                console.error('Error loading URLs:', error);
+                showError('Error loading URL data: ' + error.message);
+            }
+        }
+
+        function displayData(data, type) {
+            const container = document.getElementById('data-container');
+            
+            if (data.length === 0) {
+                // FIXED CWE-79: Use safe DOM creation instead of innerHTML
+                container.textContent = '';
+                const emptyDiv = document.createElement('div');
+                emptyDiv.className = 'empty-state';
+                const icon = document.createElement('i');
+                icon.className = 'fas fa-inbox';
+                const heading = document.createElement('h3');
+                heading.textContent = 'No data found';
+                const para = document.createElement('p');
+                para.textContent = `No ${type} analyses have been saved yet`;
+                emptyDiv.appendChild(icon);
+                emptyDiv.appendChild(heading);
+                emptyDiv.appendChild(para);
+                container.appendChild(emptyDiv);
+                return;
+            }
+
+            let html = '';
+
+            if (type === 'emails') {
+                html = data.map(email => `
+                    <div class="email-card">
+                        <div class="email-header">
+                            <div class="email-info">
+                                <h2>
+                                    <i class="fas fa-envelope"></i>
+                                    ${escapeHtml(email.subject || 'No Subject')}
+                                </h2>
+                                <div class="email-meta">
+                                    <span><i class="fas fa-calendar"></i> ${new Date(email.timestamp).toLocaleString()}</span>
+                                    <span><i class="fas fa-file-alt"></i> ${email.analysis.metadata.wordCount} words</span>
+                                    <span><i class="fas fa-clock"></i> ${email.analysis.metadata.processingTime}ms</span>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 15px; align-items: start;">
+                                <div class="threat-score ${getThreatScoreClass(email.threatScore)}">
+                                    ${email.threatScore}
+                                </div>
+                                <span class="threat-badge ${getThreatBadgeClass(email.classification)}">
+                                    <i class="fas ${getThreatIcon(email.classification)}"></i>
+                                    ${email.classification}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="email-body">
+                            <div class="content-preview">
+                                <p>${escapeHtml(email.content).substring(0, 300)}${email.content.length > 300 ? '...' : ''}</p>
+                            </div>
+
+                            <div class="features-grid">
+                                <div class="feature-box">
+                                    <h4>Confidence</h4>
+                                    <p>${email.analysis.confidence.level}</p>
+                                </div>
+                                <div class="feature-box">
+                                    <h4>Suspicious Keywords</h4>
+                                    <p>${email.analysis.features.suspiciousKeywords.length || 0}</p>
+                                </div>
+                                <div class="feature-box">
+                                    <h4>Urgent Language</h4>
+                                    <p>${email.analysis.features.hasUrgentLanguage ? 'Yes ⚠️' : 'No ✓'}</p>
+                                </div>
+                                <div class="feature-box">
+                                    <h4>URLs Found</h4>
+                                    <p>${email.analysis.features.urlCount}</p>
+                                </div>
+                            </div>
+
+                            ${email.analysis.explanation.riskFactors.length > 0 ? `
+                                <div class="risk-factors">
+                                    <h4><i class="fas fa-exclamation-triangle"></i> Risk Summary</h4>
+                                    <p>${email.analysis.explanation.summary}</p>
+                                    <p style="margin-top: 10px; color: #856404;"><strong>Recommendation:</strong> ${email.analysis.explanation.recommendation.message}</p>
+                                </div>
+                            ` : ''}
+                        </div>
+                        <div class="timestamp">ID: ${email.id} | Analyzed: ${new Date(email.analysis.metadata.analysisTimestamp).toLocaleString()}</div>
+                    </div>
+                `).join('');
+            } else {
+                html = data.map(url => `
+                    <div class="email-card">
+                        <div class="email-header">
+                            <div class="email-info">
+                                <h2>
+                                    <i class="fas fa-link"></i>
+                                    ${escapeHtml(url.url)}
+                                </h2>
+                                <div class="email-meta">
+                                    <span><i class="fas fa-calendar"></i> ${new Date(url.timestamp).toLocaleString()}</span>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 15px; align-items: start;">
+                                <div class="threat-score ${getThreatScoreClass(url.threatScore)}">
+                                    ${url.threatScore}
+                                </div>
+                                <span class="threat-badge ${getThreatBadgeClass(url.classification)}">
+                                    <i class="fas ${getThreatIcon(url.classification)}"></i>
+                                    ${url.classification}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="email-body">
+                            <div class="features-grid">
+                                <div class="feature-box">
+                                    <h4>Confidence</h4>
+                                    <p>${url.analysis.confidence.level}</p>
+                                </div>
+                                <div class="feature-box">
+                                    <h4>Malicious Score</h4>
+                                    <p>${url.threatScore}</p>
+                                </div>
+                                <div class="feature-box">
+                                    <h4>Suspicious Keywords</h4>
+                                    <p>${url.analysis.features.suspiciousKeywords.length || 0}</p>
+                                </div>
+                            </div>
+
+                            ${url.analysis.explanation.riskFactors.length > 0 ? `
+                                <div class="risk-factors">
+                                    <h4><i class="fas fa-exclamation-triangle"></i> Risk Summary</h4>
+                                    <p>${url.analysis.explanation.summary}</p>
+                                </div>
+                            ` : ''}
+                        </div>
+                        <div class="timestamp">ID: ${url.id} | Analyzed: ${new Date(url.analysis.metadata.analysisTimestamp).toLocaleString()}</div>
+                    </div>
+                `).join('');
+            }
+
+            container.innerHTML = html;
+        }
+
+        function getThreatScoreClass(score) {
+            if (score < 30) return 'score-low';
+            if (score < 70) return 'score-medium';
+            return 'score-high';
+        }
+
+        function getThreatBadgeClass(classification) {
+            if (classification === 'Safe') return 'threat-safe';
+            if (classification === 'Suspicious') return 'threat-suspicious';
+            return 'threat-phishing';
+        }
+
+        function getThreatIcon(classification) {
+            if (classification === 'Safe') return 'fa-check-circle';
+            if (classification === 'Suspicious') return 'fa-exclamation-circle';
+            return 'fa-times-circle';
+        }
+
+        function updateStats(data) {
+            let total = data.length;
+            let suspicious = data.filter(d => d.classification === 'Suspicious').length;
+            let safe = data.filter(d => d.classification === 'Safe').length;
+
+            document.getElementById('total-count').textContent = total;
+            document.getElementById('suspicious-count').textContent = suspicious;
+            document.getElementById('safe-count').textContent = safe;
+        }
+
+        function refreshData() {
+            if (currentType === 'emails') {
+                loadEmailData();
+            } else {
+                loadURLData();
+            }
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function showError(message) {
+            // FIXED CWE-79: Use safe DOM creation instead of innerHTML
+            const container = document.getElementById('data-container');
+            container.textContent = '';
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'empty-state';
+            const icon = document.createElement('i');
+            icon.className = 'fas fa-exclamation-circle';
+            const heading = document.createElement('h3');
+            heading.textContent = 'Error';
+            const para = document.createElement('p');
+            para.textContent = message;
+            errorDiv.appendChild(icon);
+            errorDiv.appendChild(heading);
+            errorDiv.appendChild(para);
+            container.appendChild(errorDiv);
+        }
+
+        // Auto-load emails on page load
+        window.addEventListener('load', loadEmailData);
+    </script>
+</body>
+</html>

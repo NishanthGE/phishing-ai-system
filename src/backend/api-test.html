@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend API Tester - Phishing Detection System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .tester-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .tester-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .card h2 {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card h2 span {
+            color: #3498db;
+            font-size: 14px;
+            background: #e3f2fd;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        
+        textarea, input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #e9ecef;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        textarea:focus, input:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .response {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .response.success {
+            border-color: #27ae60;
+            background: #f0fdf4;
+        }
+        
+        .response.error {
+            border-color: #e74c3c;
+            background: #fef2f2;
+        }
+        
+        .response-header {
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .status-badge.success {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .status-badge.error {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .status-badge.info {
+            background: #3498db;
+            color: white;
+        }
+        
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #2c3e50;
+        }
+        
+        .example {
+            background: #f0f4f8;
+            border-left: 4px solid #3498db;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #495057;
+        }
+        
+        .example-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .copy-btn {
+            padding: 6px 12px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        
+        .copy-btn:hover {
+            background: #2980b9;
+        }
+        
+        .status-info {
+            font-size: 12px;
+            margin-top: 10px;
+            padding: 10px;
+            background: #e3f2fd;
+            border-radius: 4px;
+            color: #1976d2;
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛡️ Backend API Tester</h1>
+            <p>Test all API endpoints and see real data flow between frontend and backend</p>
+        </header>
+        
+        <div class="tester-grid">
+            <!-- Email Analysis -->
+            <div class="card">
+                <h2>
+                    🔍 Analyze Email
+                    <span>POST</span>
+                </h2>
+                
+                <div class="example">
+                    <div class="example-title">📝 Sample Email:</div>
+                    <button class="copy-btn" onclick="loadEmailSample()">Load Sample Email</button>
+                </div>
+                
+                <textarea id="email-input" placeholder="Paste email content here...">From: support@paypa1.com
+Subject: Urgent: Verify Your Account
+
+Dear Customer,
+We detected suspicious activity. Click here immediately.</textarea>
+                
+                <button onclick="analyzeEmail()">
+                    <span id="email-loading"></span> Send to Backend
+                </button>
+                
+                <div class="response" id="email-response" style="display:none;"></div>
+            </div>
+            
+            <!-- URL Analysis -->
+            <div class="card">
+                <h2>
+                    🔗 Analyze URL
+                    <span>POST</span>
+                </h2>
+                
+                <div class="example">
+                    <div class="example-title">📝 Sample URLs:</div>
+                    <button class="copy-btn" onclick="loadURLSample()">Load Sample URL</button>
+                </div>
+                
+                <input type="text" id="url-input" placeholder="Enter URL to analyze..." value="https://paypa1.com/verify-account">
+                
+                <button onclick="analyzeURL()">
+                    <span id="url-loading"></span> Send to Backend
+                </button>
+                
+                <div class="response" id="url-response" style="display:none;"></div>
+            </div>
+            
+            <!-- Batch Email Analysis -->
+            <div class="card">
+                <h2>
+                    📧 Batch Email Analysis
+                    <span>POST</span>
+                </h2>
+                
+                <textarea id="batch-email-input" placeholder="Enter emails, one per line...">Email 1 content
+Email 2 content
+Email 3 content</textarea>
+                
+                <button onclick="batchAnalyzeEmails()">
+                    <span id="batch-email-loading"></span> Batch Analyze Emails
+                </button>
+                
+                <div class="response" id="batch-email-response" style="display:none;"></div>
+            </div>
+            
+            <!-- Batch URL Analysis -->
+            <div class="card">
+                <h2>
+                    🔗 Batch URL Analysis
+                    <span>POST</span>
+                </h2>
+                
+                <textarea id="batch-url-input" placeholder="Enter URLs, one per line...">https://example1.com
+https://example2.com
+https://example3.com</textarea>
+                
+                <button onclick="batchAnalyzeURLs()">
+                    <span id="batch-url-loading"></span> Batch Analyze URLs
+                </button>
+                
+                <div class="response" id="batch-url-response" style="display:none;"></div>
+            </div>
+            
+            <!-- Health Check -->
+            <div class="card">
+                <h2>
+                    ❤️ System Health
+                    <span>GET</span>
+                </h2>
+                
+                <p style="color: #666; font-size: 14px; margin: 10px 0;">Check if backend is online and healthy</p>
+                
+                <button onclick="checkHealth()">
+                    <span id="health-loading"></span> Check Backend Health
+                </button>
+                
+                <div class="response" id="health-response" style="display:none;"></div>
+            </div>
+            
+            <!-- Sample Email -->
+            <div class="card">
+                <h2>
+                    📄 Get Sample Email
+                    <span>GET</span>
+                </h2>
+                
+                <p style="color: #666; font-size: 14px; margin: 10px 0;">Fetch sample phishing email from backend</p>
+                
+                <button onclick="getSampleEmail()">
+                    <span id="sample-email-loading"></span> Get Sample Email
+                </button>
+                
+                <div class="response" id="sample-email-response" style="display:none;"></div>
+            </div>
+        </div>
+        
+        <div class="card" style="background: #f8f9fa;">
+            <h2>📊 Connection Status</h2>
+            <div class="status-info">
+                <strong>Backend URL:</strong> http://localhost:8081<br>
+                <strong>Frontend URL:</strong> http://localhost:8080<br>
+                <strong>API Base:</strong> /api<br>
+                <div id="connection-status" style="margin-top: 10px; color: #f39c12;">🔄 Checking connection...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:8081';
+
+        function showResponse(elementId, success, data, statusCode = null) {
+            const element = document.getElementById(elementId);
+            element.style.display = 'block';
+            
+            const statusClass = success ? 'success' : 'error';
+            element.className = `response ${statusClass}`;
+            
+            const badge = success ? 
+                '<span class="status-badge success">✓ SUCCESS</span>' : 
+                '<span class="status-badge error">✗ ERROR</span>';
+            
+            const status = statusCode ? `Status: ${statusCode}` : '';
+            
+            // FIXED CWE-79: Use safe DOM creation instead of innerHTML
+            element.textContent = '';
+            const header = document.createElement('div');
+            header.className = 'response-header';
+            header.innerHTML = badge + status;  // Only static content
+            const pre = document.createElement('pre');
+            pre.textContent = JSON.stringify(data, null, 2);
+            element.appendChild(header);
+            element.appendChild(pre);
+        }
+
+        function setLoading(elementId, loading) {
+            const element = document.getElementById(elementId);
+            element.textContent = loading ? '⏳ ' : '';
+        }
+
+        async function analyzeEmail() {
+            const email = document.getElementById('email-input').value;
+            if (!email) {
+                alert('Please enter email content');
+                return;
+            }
+            
+            setLoading('email-loading', true);
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/analyze-email`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ emailContent: email })
+                });
+                
+                const data = await response.json();
+                showResponse('email-response', data.success, data, response.status);
+            } catch (error) {
+                showResponse('email-response', false, { error: error.message }, 'Network Error');
+            } finally {
+                setLoading('email-loading', false);
+            }
+        }
+
+        async function analyzeURL() {
+            const url = document.getElementById('url-input').value;
+            if (!url) {
+                alert('Please enter a URL');
+                return;
+            }
+            
+            setLoading('url-loading', true);
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/analyze-url`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ url: url })
+                });
+                
+                const data = await response.json();
+                showResponse('url-response', data.success, data, response.status);
+            } catch (error) {
+                showResponse('url-response', false, { error: error.message }, 'Network Error');
+            } finally {
+                setLoading('url-loading', false);
+            }
+        }
+
+        async function batchAnalyzeEmails() {
+            const content = document.getElementById('batch-email-input').value;
+            const emails = content.split('\n').filter(e => e.trim());
+            
+            if (!emails.length) {
+                alert('Please enter emails');
+                return;
+            }
+            
+            setLoading('batch-email-loading', true);
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/analyze-emails-batch`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ emails: emails })
+                });
+                
+                const data = await response.json();
+                showResponse('batch-email-response', data.success, data, response.status);
+            } catch (error) {
+                showResponse('batch-email-response', false, { error: error.message }, 'Network Error');
+            } finally {
+                setLoading('batch-email-loading', false);
+            }
+        }
+
+        async function batchAnalyzeURLs() {
+            const content = document.getElementById('batch-url-input').value;
+            const urls = content.split('\n').filter(u => u.trim());
+            
+            if (!urls.length) {
+                alert('Please enter URLs');
+                return;
+            }
+            
+            setLoading('batch-url-loading', true);
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/analyze-urls-batch`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ urls: urls })
+                });
+                
+                const data = await response.json();
+                showResponse('batch-url-response', data.success, data, response.status);
+            } catch (error) {
+                showResponse('batch-url-response', false, { error: error.message }, 'Network Error');
+            } finally {
+                setLoading('batch-url-loading', false);
+            }
+        }
+
+        async function checkHealth() {
+            setLoading('health-loading', true);
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/health`);
+                const data = await response.json();
+                showResponse('health-response', data.success, data, response.status);
+                updateConnectionStatus(true);
+            } catch (error) {
+                showResponse('health-response', false, { error: error.message }, 'Network Error');
+                updateConnectionStatus(false);
+            } finally {
+                setLoading('health-loading', false);
+            }
+        }
+
+        async function getSampleEmail() {
+            setLoading('sample-email-loading', true);
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/sample-email`);
+                const data = await response.json();
+                showResponse('sample-email-response', data.success, data, response.status);
+            } catch (error) {
+                showResponse('sample-email-response', false, { error: error.message }, 'Network Error');
+            } finally {
+                setLoading('sample-email-loading', false);
+            }
+        }
+
+        function loadEmailSample() {
+            document.getElementById('email-input').value = `From: admin@paypa1-verify.com
+Subject: URGENT: Confirm Your PayPal Account Now
+Date: Wed, 12 Mar 2026 10:30:00 +0000
+
+Dear Valued Customer,
+
+We have detected some unusual activity on your PayPal account. For your security, we need you to verify your identity immediately.
+
+CLICK HERE to verify your account: http://paypa1-verify-now.com/confirm
+
+This request expires in 24 hours. Please act now.
+
+Regards,
+PayPal Security Team`;
+        }
+
+        function loadURLSample() {
+            document.getElementById('url-input').value = 'https://paypa1-security-verify.com/login';
+        }
+
+        function updateConnectionStatus(connected) {
+            const status = document.getElementById('connection-status');
+            if (connected) {
+                // FIXED CWE-79: Use safe DOM methods
+                status.textContent = '✅ Backend Connected! - All systems operational';
+                status.style.color = '#27ae60';
+            } else {
+                // FIXED CWE-79: Use safe DOM methods
+                status.textContent = '❌ Backend Not Responding - Check if server is running on port 8081';
+                status.style.color = '#e74c3c';
+            }
+        }
+
+        // Check connection on load
+        window.addEventListener('load', () => {
+            checkHealth();
+        });
+    </script>
+</body>
+</html>

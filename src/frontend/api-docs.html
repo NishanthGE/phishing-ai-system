@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation - Phishing Detection System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        .endpoint-section {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .section-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title i {
+            font-size: 24px;
+        }
+        
+        .endpoints {
+            padding: 20px;
+        }
+        
+        .endpoint {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .endpoint:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .endpoint-method {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+            font-size: 12px;
+            color: white;
+            margin-right: 10px;
+        }
+        
+        .method-post {
+            background: #e74c3c;
+        }
+        
+        .method-get {
+            background: #3498db;
+        }
+        
+        .endpoint-path {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-right: 10px;
+        }
+        
+        .endpoint-desc {
+            display: block;
+            margin-top: 8px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        .try-it-btn {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .try-it-btn:hover {
+            background: #229954;
+            transform: scale(1.05);
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+        }
+        
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .close-btn {
+            float: right;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #7f8c8d;
+        }
+        
+        .close-btn:hover {
+            color: #2c3e50;
+        }
+        
+        .modal-content h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .test-btn {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .test-btn:hover {
+            background: #2980b9;
+        }
+        
+        .response {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .response pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        
+        .status-success {
+            color: #27ae60;
+        }
+        
+        .status-error {
+            color: #e74c3c;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-book"></i> API Documentation</h1>
+            <p>AI-Based Phishing Detection System v2.0.0</p>
+        </header>
+        
+        <!-- Email Endpoints -->
+        <div class="endpoint-section">
+            <div class="section-title">
+                <i class="fas fa-envelope"></i> Email Analysis
+            </div>
+            <div class="endpoints">
+                <div class="endpoint">
+                    <span class="endpoint-method method-post">POST</span>
+                    <span class="endpoint-path">/api/analyze-email</span>
+                    <span class="endpoint-desc">Analyze single email for phishing indicators</span>
+                    <button class="try-it-btn" onclick="openTestModal('POST', '/api/analyze-email', 'emailContent', 'Your email content here...')">Try It</button>
+                </div>
+                
+                <div class="endpoint">
+                    <span class="endpoint-method method-post">POST</span>
+                    <span class="endpoint-path">/api/analyze-emails-batch</span>
+                    <span class="endpoint-desc">Batch analyze multiple emails</span>
+                    <button class="try-it-btn" onclick="openTestModal('POST', '/api/analyze-emails-batch', 'emails', '[&quot;email1&quot;, &quot;email2&quot;]')">Try It</button>
+                </div>
+                
+                <div class="endpoint">
+                    <span class="endpoint-method method-get">GET</span>
+                    <span class="endpoint-path">/api/sample-email</span>
+                    <span class="endpoint-desc">Get sample phishing email for testing</span>
+                    <button class="try-it-btn" onclick="testEndpoint('GET', '/api/sample-email')">Try It</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- URL Endpoints -->
+        <div class="endpoint-section">
+            <div class="section-title">
+                <i class="fas fa-link"></i> URL Analysis
+            </div>
+            <div class="endpoints">
+                <div class="endpoint">
+                    <span class="endpoint-method method-post">POST</span>
+                    <span class="endpoint-path">/api/analyze-url</span>
+                    <span class="endpoint-desc">Analyze single URL for malicious indicators</span>
+                    <button class="try-it-btn" onclick="openTestModal('POST', '/api/analyze-url', 'url', 'https://example.com')">Try It</button>
+                </div>
+                
+                <div class="endpoint">
+                    <span class="endpoint-method method-post">POST</span>
+                    <span class="endpoint-path">/api/analyze-urls-batch</span>
+                    <span class="endpoint-desc">Batch analyze multiple URLs</span>
+                    <button class="try-it-btn" onclick="openTestModal('POST', '/api/analyze-urls-batch', 'urls', '[&quot;https://url1.com&quot;, &quot;https://url2.com&quot;]')">Try It</button>
+                </div>
+                
+                <div class="endpoint">
+                    <span class="endpoint-method method-get">GET</span>
+                    <span class="endpoint-path">/api/sample-url</span>
+                    <span class="endpoint-desc">Get sample URLs for testing</span>
+                    <button class="try-it-btn" onclick="testEndpoint('GET', '/api/sample-url')">Try It</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- System Endpoints -->
+        <div class="endpoint-section">
+            <div class="section-title">
+                <i class="fas fa-cogs"></i> System
+            </div>
+            <div class="endpoints">
+                <div class="endpoint">
+                    <span class="endpoint-method method-get">GET</span>
+                    <span class="endpoint-path">/api/health</span>
+                    <span class="endpoint-desc">System health check</span>
+                    <button class="try-it-btn" onclick="testEndpoint('GET', '/api/health')">Try It</button>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Backend: http://localhost:8081 | Frontend: http://localhost:8080</p>
+        </footer>
+    </div>
+    
+    <!-- Test Modal -->
+    <div id="testModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeTestModal()">&times;</span>
+            <h2 id="modalTitle">Test Endpoint</h2>
+            <form id="testForm">
+                <div class="form-group">
+                    <label>Endpoint:</label>
+                    <input type="text" id="modalEndpoint" readonly>
+                </div>
+                <div class="form-group">
+                    <label id="paramLabel">Parameter:</label>
+                    <textarea id="modalParam" placeholder="Enter parameter value"></textarea>
+                </div>
+                <button type="button" class="test-btn" onclick="sendTestRequest()">Send Request</button>
+            </form>
+            <div id="responseContainer" style="display:none;">
+                <h3>Response:</h3>
+                <div class="response">
+                    <pre id="responseText"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const API_BASE_URL = 'http://localhost:8081';
+        
+        function openTestModal(method, endpoint, paramName, placeholder) {
+            document.getElementById('testModal').classList.add('active');
+            document.getElementById('modalTitle').textContent = `Test ${method} ${endpoint}`;
+            document.getElementById('modalEndpoint').value = `${method} ${API_BASE_URL}${endpoint}`;
+            document.getElementById('paramLabel').textContent = `${paramName}:`;
+            document.getElementById('modalParam').placeholder = placeholder;
+            
+            window.currentTestData = { method, endpoint, paramName };
+        }
+        
+        function closeTestModal() {
+            document.getElementById('testModal').classList.remove('active');
+            document.getElementById('responseContainer').style.display = 'none';
+        }
+        
+        async function sendTestRequest() {
+            const paramValue = document.getElementById('modalParam').value;
+            const { method, endpoint, paramName } = window.currentTestData;
+            const responseContainer = document.getElementById('responseContainer');
+            const responseText = document.getElementById('responseText');
+            
+            try {
+                let body = null;
+                if (method === 'POST') {
+                    body = JSON.stringify({ [paramName]: paramValue });
+                }
+                
+                const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+                    method,
+                    headers: { 'Content-Type': 'application/json' },
+                    body
+                });
+                
+                const data = await response.json();
+                responseText.textContent = JSON.stringify(data, null, 2);
+                responseContainer.style.display = 'block';
+                
+            } catch (error) {
+                responseText.textContent = `Error: ${error.message}`;
+                responseContainer.style.display = 'block';
+            }
+        }
+        
+        function testEndpoint(method, endpoint) {
+            document.getElementById('testModal').classList.add('active');
+            document.getElementById('modalTitle').textContent = `Test ${method} ${endpoint}`;
+            document.getElementById('modalEndpoint').value = `${method} ${API_BASE_URL}${endpoint}`;
+            document.getElementById('modalParam').parentElement.style.display = 'none';
+            
+            window.currentTestData = { method, endpoint };
+            sendTestRequest();
+        }
+        
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('testModal');
+            if (event.target === modal) {
+                closeTestModal();
+            }
+        }
+    </script>
+</body>
+</html>
