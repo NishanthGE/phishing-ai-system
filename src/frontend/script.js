@@ -214,7 +214,7 @@ window.logout = function() {
     AppState.username = '';
     AppState.token = null;
     showLoginModal();
-    showToast('✅ Logged out successfully', 'success');
+    showToast('Logged out successfully', 'success');
 };
 
 /**
@@ -256,7 +256,7 @@ async function checkBackendConnection() {
                 const textEl = document.getElementById('connection-text');
                 if (textEl) textEl.textContent = 'Connected';
             }
-            showToast('✅ Backend connected successfully', 'success');
+            showToast('Backend connected successfully', 'success');
         } else {
             throw new Error(`HTTP ${response.status}`);
         }
@@ -269,7 +269,7 @@ async function checkBackendConnection() {
             const textEl = document.getElementById('connection-text');
             if (textEl) textEl.textContent = 'Offline';
         }
-        showToast('❌ Cannot connect to backend. Make sure server is running on port 8081', 'error');
+        showToast('Cannot connect to backend. Make sure server is running on port 8081', 'error');
     }
 }
 
@@ -316,7 +316,7 @@ async function analyzeEmail() {
             displayEmailResults(data.data.analysis, data.data.processingTime);
             updateStats();
             showResults();
-            showToast('✅ Email analysis completed successfully!', 'success');
+            showToast('Email analysis completed successfully!', 'success');
         } else {
             throw new Error(data.error || 'Analysis failed');
         }
@@ -359,7 +359,7 @@ async function analyzeURL() {
             displayURLResults(data.data.analysis, data.data.processingTime);
             updateStats();
             showResults();
-            showToast('✅ URL analysis completed successfully!', 'success');
+            showToast('URL analysis completed successfully!', 'success');
         } else {
             throw new Error(data.error || 'Analysis failed');
         }
@@ -403,7 +403,7 @@ async function batchAnalyze() {
         const data = await response.json();
 
         if (data.success) {
-            showToast(`✅ Batch analysis completed! Processed ${items.length} items.`, 'success');
+            showToast(`Batch analysis completed! Processed ${items.length} items.`, 'success');
         } else {
             throw new Error(data.error);
         }
@@ -427,7 +427,7 @@ async function loadSampleEmail(type = 'phishing') {
         if (data.success) {
             document.getElementById('email-input').value = data.data.sample.content;
             document.getElementById('email-char-count').textContent = data.data.sample.content.length;
-            const label = type === 'legitimate' ? '✅ Safe (non-threat) email sample loaded' : '⚠️ Threat email sample loaded';
+            const label = type === 'legitimate' ? 'Safe (non-threat) email sample loaded' : 'Threat email sample loaded';
             showToast(label, type === 'legitimate' ? 'success' : 'warning');
         }
     } catch (error) {
@@ -448,7 +448,7 @@ async function loadSampleURL(type = 'malicious') {
         if (data.success) {
             document.getElementById('url-input').value = data.data.sample.url;
             document.getElementById('url-char-count').textContent = data.data.sample.url.length;
-            const label = type === 'legitimate' ? '✅ Safe (non-threat) URL sample loaded' : '⚠️ Threat URL sample loaded';
+            const label = type === 'legitimate' ? 'Safe (non-threat) URL sample loaded' : 'Threat URL sample loaded';
             showToast(label, type === 'legitimate' ? 'success' : 'warning');
         }
     } catch (error) {

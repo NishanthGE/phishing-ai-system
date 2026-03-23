@@ -449,15 +449,14 @@ body::after {
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     padding: 50px 44px;
     overflow-y: auto;
     max-height: 92vh;
 }
 
 .login-container { width: 100%; max-width: 380px; }
-.login-card { width: 100%; }
+.login-card { width: 100%; margin: auto; }
 
 .login-header {
     text-align: center;
@@ -1524,7 +1523,7 @@ body::after {
 }
 
 /* ===================== TOAST NOTIFICATIONS ===================== */
-.toast-container {
+#toast-container {
     position: fixed;
     bottom: 28px;
     right: 28px;
